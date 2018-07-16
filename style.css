@@ -1,0 +1,41 @@
+@font-face{
+	font-family: type-writer;
+	src: url(typewriter.ttf);	
+}
+
+.section img{
+	width: 100%;
+	height: auto;
+}
+.topnav {	
+	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+.topnav a{
+	display: block;
+	float: left;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.topnav a:hover{
+	color: #c9c9cf;
+}
+
+.title{
+	font-family: type-writer;
+	font-size: 30px;
+	color: #878792;
+}
+
+.link-title{
+	font-size: 20px;
+}
