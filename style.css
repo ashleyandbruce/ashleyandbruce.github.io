@@ -3,10 +3,26 @@
 	src: url(typewriter.ttf);	
 }
 
+@font-face{
+	font-family: calligraphy;
+	font-style: bold;
+	src: url(broken-heart.ttf);
+}
+
 .section img{
 	width: 100%;
 	height: auto;
 }
+
+.wedding-announcement-text{
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}
+
 .topnav {	
 	background-color: white;
 	overflow: hidden;
@@ -33,9 +49,23 @@
 .title{
 	font-family: type-writer;
 	font-size: 30px;
+}
+
+.section-title{
 	color: #878792;
 }
 
 .link-title{
 	font-size: 20px;
+	color: #878792;
 }
+
+.link-title:hover{
+	color: #c9c9cf;
+}
+
+.names{
+	font-family: calligraphy;
+	font-size: 90px;
+}
+
