@@ -13,32 +13,7 @@ body{
 	color: #878792;
 }
 
-.section img{
-	width: 100%;
-	height: auto;
-}
-
-.wedding-announcement-text{
-	position: absolute;
-	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	color: white;
-	text-align: center;
-}
-
-.topnav {	
-	background-color: white;
-	width: 100%;
-	top: 0
-}
-
-.sticky{
-	overflow: hidden;
-	position: fixed;
-}
-
-.topnav a{
+.left-aligned{
 	display: block;
 	float: left;
 	text-decoration: none;
@@ -48,13 +23,21 @@ body{
 	padding-right: 30px;
 }
 
+.divide img{
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+}
+
+.sticky{
+	overflow: hidden;
+	position: fixed;
+	top:0;
+}
+
 .title{
 	font-family: type-writer;
 	font-size: 30px;
-}
-
-.section-title{
-	color: #878792;
 }
 
 .link-title{
@@ -66,8 +49,23 @@ body{
 	color: #c9c9cf;
 }
 
-.names{
+#topnav{	
+	background-color: white;
+	width: 100%;
+	padding-top: 30px;
+}
+
+#names{
 	font-family: calligraphy;
 	font-size: 90px;
 }
 
+#welcome-image{
+	width: 100%;
+	height: auto;
+}
+
+#main-title{
+	text-align: center;
+	vertical-align: center;
+}
