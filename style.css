@@ -11,6 +11,10 @@
 
 body{
 	color: #878792;
+	font-size: 20px;
+	border-color: #878792;
+	border-bottom-width: 0.5px;
+	border-top-width: 0.5px;
 }
 
 .left-aligned{
@@ -26,7 +30,6 @@ body{
 .divide img{
 	width: 100%;
 	height: auto;
-	min-height: 200px;
 }
 
 .sticky{
@@ -36,8 +39,8 @@ body{
 }
 
 .title{
-	font-family: type-writer;
 	font-size: 30px;
+	font-family: type-writer;
 }
 
 .link-title{
@@ -53,6 +56,14 @@ body{
 	width: 100%;
 	height: auto;
 }
+.section-content{
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.section-content div{
+	padding-bottom: 30px;
+}
 
 #topnav{	
 	background-color: white;
@@ -61,14 +72,12 @@ body{
 
 #names{
 	font-family: calligraphy;
-	font-size: 90px;
+	font-size: 100px;
 }
 
 #main-title{
 	text-align: center;
 	vertical-align: center;
 	padding-bottom: 30px;
-	border-bottom-color: #878792;
-	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 }
