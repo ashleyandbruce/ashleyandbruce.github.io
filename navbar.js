@@ -1,3 +1,4 @@
+window.onload = function(){
 
 window.onscroll = function(){
 	scroll();
@@ -15,4 +16,6 @@ function scroll(){
 	else{
 		navbar.classList.remove("sticky");
 	}
+}
+
 }
