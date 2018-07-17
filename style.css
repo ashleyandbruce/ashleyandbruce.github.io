@@ -68,4 +68,7 @@ body{
 	text-align: center;
 	vertical-align: center;
 	padding-bottom: 30px;
+	border-bottom-color: #878792;
+	border-bottom-width: 0.5px;
+	border-bottom-style: solid;
 }
