@@ -1,21 +1,22 @@
 window.onload = function(){
 
-window.onscroll = function(){
-	scroll();
-};
+	window.onscroll = function(){
+		scroll();
+	};
 
-var navbar =  document.getElementById("topnav"); 
-var	sticky = navbar.offsetTop;
+	var navbar =  document.getElementById("topnav"); 
+	var	sticky = navbar.offsetTop;
 
 
-function scroll(){
+	function scroll(){
 	
-	if(window.pageYOffset >= sticky){
-		navbar.classList.add("sticky");
+		if(window.pageYOffset >= sticky){
+			navbar.classList.add("sticky");
+		}
+		else{
+			navbar.classList.remove("sticky");
+		}
 	}
-	else{
-		navbar.classList.remove("sticky");
-	}
-}
-
+	
+	w3.slideshow(".slide", 5000);
 }

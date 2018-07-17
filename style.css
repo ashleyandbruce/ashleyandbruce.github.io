@@ -49,6 +49,11 @@ body{
 	color: #c9c9cf;
 }
 
+.slide{
+	width: 100%;
+	height: auto;
+}
+
 #topnav{	
 	background-color: white;
 	width: 100%;
@@ -57,11 +62,6 @@ body{
 #names{
 	font-family: calligraphy;
 	font-size: 90px;
-}
-
-#welcome-image{
-	width: 100%;
-	height: auto;
 }
 
 #main-title{
