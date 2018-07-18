@@ -41,6 +41,7 @@ body{
 .title{
 	font-size: 30px;
 	font-family: type-writer;
+	text-align: center;
 }
 
 .link-title{
@@ -80,4 +81,10 @@ body{
 	vertical-align: center;
 	padding-bottom: 30px;
 	border-bottom-style: solid;
+}
+
+#section4{
+	
+	font-family: type-writer;
+	
 }
