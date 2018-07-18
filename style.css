@@ -57,6 +57,11 @@ body{
 	width: 100%;
 	height: auto;
 }
+
+.section{
+	padding: 30px;
+}
+
 .section-content{
 	padding-bottom: 50px;
 	padding-top: 50px;
@@ -78,6 +83,5 @@ body{
 
 #main-title{
 	vertical-align: center;
-	padding-bottom: 30px;
-	border-bottom-style: solid;
+	padding-top: 50px;
 }

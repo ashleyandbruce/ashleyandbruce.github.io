@@ -1,6 +1,17 @@
+
+window.load = function(){
+	
+	
+	
+	
+};
+
+
 window.onload = function(){
 
-	window.onscroll = function(){
+	w3.slideshow(".slide", 5000);
+	
+/**	window.onscroll = function(){
 		scroll();
 	};
 
@@ -16,7 +27,6 @@ window.onload = function(){
 		else{
 			navbar.classList.remove("sticky");
 		}
-	}
+	}**/
 	
-	w3.slideshow(".slide", 5000);
 }
