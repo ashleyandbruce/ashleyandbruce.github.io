@@ -1,12 +1,12 @@
 @font-face{
 	font-family: type-writer;
-	src: url(typewriter.ttf);	
+	src: url(font/typewriter.ttf);	
 }
 
 @font-face{
 	font-family: calligraphy;
 	font-style: bold;
-	src: url(broken-heart.ttf);
+	src: url(font/broken-heart.ttf);
 }
 
 body{
@@ -15,21 +15,16 @@ body{
 	border-color: #878792;
 	border-bottom-width: 0.5px;
 	border-top-width: 0.5px;
+	text-align: center;
 }
 
 .left-aligned{
 	display: block;
 	float: left;
 	text-decoration: none;
-	text-align: center;
 	padding: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
-}
-
-.divide img{
-	width: 100%;
-	height: auto;
 }
 
 .sticky{
@@ -41,8 +36,12 @@ body{
 .title{
 	font-size: 30px;
 	font-family: type-writer;
-	text-align: center;
 	vertical-align: center;
+}
+
+.section-title{
+	font-family: calligraphy;
+	font-size: 80px;
 }
 
 .link-title{
@@ -78,7 +77,6 @@ body{
 }
 
 #main-title{
-	text-align: center;
 	vertical-align: center;
 	padding-bottom: 30px;
 	border-bottom-style: solid;
