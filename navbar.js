@@ -1,14 +1,5 @@
-
-window.load = function(){
-	
-	
-	
-	
-};
-
-
 window.onload = function(){
-	slideshow(["slideshow1.jpg", "slideshow2.jpg", "slideshow3.jpg"], 2000, "slide");
+	slideshow(["save-the-date-alt.png","slideshow1.jpg", "slideshow2.jpg", "slideshow3.jpg"], 2000, "slide");
 }
 
 
