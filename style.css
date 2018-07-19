@@ -27,21 +27,10 @@ body{
 	padding-right: 30px;
 }
 
-.sticky{
-	overflow: hidden;
-	position: fixed;
-	top:0;
-}
-
 .title{
 	font-size: 30px;
 	font-family: type-writer;
 	vertical-align: center;
-}
-
-.section-title{
-	font-family: calligraphy;
-	font-size: 80px;
 }
 
 .link-title{
@@ -57,18 +46,32 @@ body{
 	padding: 30px;
 }
 
+.section-title{
+	font-family: calligraphy;
+	font-size: 80px;
+}
+
 .section-content{
 	padding-bottom: 50px;
 	padding-top: 50px;
+	display: grid;
 }
 
 .section-content div{
-	padding-bottom: 30px;
+	padding: 50px;
+}
+
+.section-content div img{
+	width: 50%;
+	height: auto;
 }
 
 #topnav{	
 	background-color: white;
 	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	top:0
 }
 
 #names{
