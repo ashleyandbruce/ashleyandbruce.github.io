@@ -17,3 +17,4 @@ function slideshow(slides, time, container){
 	setInterval(function(){timeout();}, time);
 	
 }
+

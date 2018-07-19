@@ -65,7 +65,11 @@ body{
 	width: 50%;
 	height: auto;
 }
-
+#map{
+	height: auto;
+	width: 100%;
+	min-height: 500px;
+}
 #topnav{	
 	background-color: white;
 	width: 100%;
