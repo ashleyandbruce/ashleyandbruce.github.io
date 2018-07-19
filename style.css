@@ -53,11 +53,6 @@ body{
 	color: #c9c9cf;
 }
 
-#slide{
-	width: 100%;
-	height: auto;
-}
-
 .section{
 	padding: 30px;
 }
@@ -76,7 +71,7 @@ body{
 	width: 100%;
 }
 
-.names{
+#names{
 	font-family: calligraphy;
 	font-size: 100px;
 }
@@ -84,4 +79,9 @@ body{
 #main-title{
 	vertical-align: center;
 	padding-top: 50px;
+}
+
+#slide{
+	width: 100%;
+	height: auto;
 }
