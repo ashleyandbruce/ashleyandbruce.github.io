@@ -8,25 +8,21 @@ window.load = function(){
 
 
 window.onload = function(){
+	slideshow(["slideshow1.jpg", "slideshow2.jpg", "slideshow3.jpg"], 2000, "slide");
+}
 
-	w3.slideshow(".slide", 5000);
+
+function slideshow(slides, time, container){
 	
-/**	window.onscroll = function(){
-		scroll();
-	};
-
-	var navbar =  document.getElementById("topnav"); 
-	var	sticky = navbar.offsetTop;
-
-
-	function scroll(){
+	var count = 0;
+	var numslides = slides.length;
+	var img = document.getElementById(container);
 	
-		if(window.pageYOffset >= sticky){
-			navbar.classList.add("sticky");
-		}
-		else{
-			navbar.classList.remove("sticky");
-		}
-	}**/
+	function timeout(){
+		count = (count + 1) % numslides;
+		img.src = slides[count];
+	}
+	
+	setInterval(function(){timeout();}, time);
 	
 }

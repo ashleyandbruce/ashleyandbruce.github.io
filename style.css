@@ -9,6 +9,8 @@
 	src: url(font/broken-heart.ttf);
 }
 
+
+
 body{
 	color: #878792;
 	font-size: 20px;
@@ -53,7 +55,7 @@ body{
 	color: #c9c9cf;
 }
 
-.slide{
+#slide{
 	width: 100%;
 	height: auto;
 }
@@ -76,7 +78,7 @@ body{
 	width: 100%;
 }
 
-#names{
+.names{
 	font-family: calligraphy;
 	font-size: 100px;
 }
