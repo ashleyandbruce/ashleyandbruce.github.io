@@ -62,6 +62,10 @@ body{
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
+	min-height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size:: cover;
+	-o-background-size: cover;
 }
 .container{
 	padding-top: 200px;
