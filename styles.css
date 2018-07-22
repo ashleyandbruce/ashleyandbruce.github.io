@@ -9,6 +9,20 @@
 	src: url(font/broken-heart.ttf);
 }
 
+
+@include media-breakpoint-up(sm){
+	html{
+		font-size: 1.2rem;
+	}
+	
+}
+
+html{
+	
+	font-size: 1rem;
+	
+}
+
 .nav-link{
 	text-decoration: none;
 	color: #878792;
@@ -35,8 +49,6 @@
 .main-title{
 	font-family: calligraphy;
 	color: white;
-	padding: 10px;
-	text-align: center;
 }
 
 .sub-main-title{
@@ -49,5 +61,8 @@ body{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-	background-size: cover
+	background-size: cover;
+}
+.container{
+	padding-top: 200px;
 }
