@@ -16,13 +16,14 @@ body{
 	border-bottom-width: 0.5px;
 	border-top-width: 0.5px;
 	text-align: center;
+	overflow-x: scroll;
 }
 
 .left-aligned{
-	display: block;
 	float: left;
 	text-decoration: none;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -62,19 +63,23 @@ body{
 }
 
 .section-content div img{
-	width: 50%;
-	height: auto;
+	width:50%;
+	height:auto;
 }
+
 #map{
+	padding-top: 50px;
 	height: auto;
 	width: 100%;
 	min-height: 500px;
+	border:none;
 }
 #topnav{	
 	background-color: white;
-	width: 100%;
 	overflow: hidden;
 	position: fixed;
+	max-height: 50px;
+	width: 100%;
 	top:0
 }
 
