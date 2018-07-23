@@ -58,15 +58,15 @@ html{
 
 body{
 	background-image: url("slideshow2.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	background-size: cover;
 	height: 100%;
+	width: 100%;
+	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size:: cover;
 	-o-background-size: cover;
-	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 }
 .container{
 	padding-top: 200px;
