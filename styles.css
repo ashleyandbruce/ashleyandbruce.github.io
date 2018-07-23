@@ -9,17 +9,8 @@
 	src: url(font/broken-heart.ttf);
 }
 
-
-@include media-breakpoint-up(sm){
-	html{
-		font-size: 1.2rem;
-	}
-	
-}
-
 html{
-	
-	font-size: 1rem;
+
 	height: 100%;
 	
 }
@@ -47,17 +38,8 @@ html{
 	text-decoration: none;
 }
 
-.main-title{
-	font-family: calligraphy;
-	color: white;
-}
-
-.sub-main-title{
-	font-family: type-writer;
-	color: white;
-}
-
 body{
+	overflow: hidden;
 	background-image: url("slideshow2.jpg");
 	height: 100%;
 	width: 100%;
@@ -68,4 +50,16 @@ body{
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
+}
+
+.content{
+	background-image: url("res/title.png");
+	height: 100%;
+	width: 100%;
+	background-size: contain;
+	-webkit-background-size: contain;
+	-moz-background-size:: contain;
+	-o-background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
