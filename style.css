@@ -25,6 +25,7 @@ html{
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-attachment: fixed;
 }
@@ -36,25 +37,15 @@ html{
 .para1{
 	background-image: url("res/picture-of-us.jpg");
 }
-
-.para2{
-	background-image: url("res/wood.jpg");
-}
-
 .para3{
 	background-image: url("res/gal3.jpg");
 }
 .para4{
 	background-image: url("res/gal1.jpg");
 }
-.para5{
-	background-image: url("res/wood2.jpg");
-}
-
 .para6{
 	background-image: url("res/gal6.jpg");
 }
-
 .para7{
 	background-image: url("res/wood3.jpg");
 }
