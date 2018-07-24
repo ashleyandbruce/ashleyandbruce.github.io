@@ -55,14 +55,20 @@ html{
 }
 
 .para3{
-	background-image: url("res/motel.jpg");
+	background-image: url("res/gal3.jpg");
 }
 .para4{
-	background-image: url("res/car.jpg");
+	background-image: url("res/gal1.jpg");
 }
 .para5{
-	background-image: url("");
+	background-image: url("res/text1.jpg");
 }
+
+.para6{
+	background-image: url("res/gal4.jpg");
+	
+}
+
 
 .bg-none{
 	background: none;
@@ -78,4 +84,8 @@ html{
 
 .card-deck, .card-columns{
 	padding: 30px;
+}
+
+.map{
+	min-height: 500px;
 }
