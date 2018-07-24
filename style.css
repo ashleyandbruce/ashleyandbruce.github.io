@@ -27,54 +27,14 @@ html{
 	top:0;
 }
 
-.nav-link{
-	text-decoration: none;
-	color: #878792;
-	font-family: type-writer;	
-}
-
-.nav-link:hover{
-	color: #c9c9cf;
+.text-none{
 	text-decoration: none;
 }
 
-.home-icon{
-	color:  #878792;
-	font-family: calligraphy;
-	text-decoration: none;
-	padding-top: 5px;
-}
-
-.home-icon:hover{
-	color: #c9c9cf;
+.text-none:hover{
 	text-decoration: none;
 }
 
-.main-body{
-	overflow: hidden;
-	background-image: url("slideshow2.jpg");
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size:: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-}
-
-.content{
-	background-image: url("res/title.png");
-	height: 100%;
-	width: 100%;
-	background-size: contain;
-	-webkit-background-size: contain;
-	-moz-background-size:: contain;
-	-o-background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
 .parallax{
 	min-height: 600px;
 	background-attachment: fixed;
@@ -98,7 +58,18 @@ html{
 	background-image: url("res/motel.jpg");
 }
 .para4{
-	background-image: url("res/luggage.jpg");
+	background-image: url("res/car.jpg");
+}
+.para5{
+	background-image: url("");
+}
+
+.bg-none{
+	background: none;
+}
+
+.border-none{
+	border: none;
 }
 
 .jumbotron{
