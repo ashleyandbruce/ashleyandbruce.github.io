@@ -61,12 +61,15 @@ html{
 	background-image: url("res/gal1.jpg");
 }
 .para5{
-	background-image: url("res/text1.jpg");
+	background-image: url("res/wood2.jpg");
 }
 
 .para6{
-	background-image: url("res/gal4.jpg");
-	
+	background-image: url("res/gal6.jpg");
+}
+
+.para7{
+	background-image: url("res/wood3.jpg");
 }
 
 
