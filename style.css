@@ -61,15 +61,11 @@ html{
 	background: none;
 }
 
-.border-none{
-	border: none;
-}
-
 .jumbotron{
 	margin-bottom: 0;
 }
 
-.card-deck {
+.card-deck, .card-column{
 	padding: 30px;
 }
 

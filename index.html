@@ -22,13 +22,13 @@
 						<a class=" pr-3 text-none text-secondary text-nowrap" href="details.html"><h6>Details</h6></a>
 						<a class=" pr-3 text-none text-secondary text-nowrap" href="travel.html"><h6>Travel</h6></a>
 						<a class=" pr-3 text-none text-secondary text-nowrap" href="registry.html"><h6>Registry</h6></a>
-						<a class="text-none text-secondary text-nowrap" href="RSVP.html"><h6>RSVP</h6></a>
+						<a class="text-none text-secondary text-nowrap" href="#rsvp"><h6>RSVP</h6></a>
 					</div>
 			</nav>
 		</header>
 		
 		<div class="jumbotron parallax para1">
-			<div class="card bg-none border-none float-left">
+			<div class="card bg-none border-0 float-left">
 				<img class="card-img-top" src="res/title.png"/>
 			</div>
 		</div>
@@ -45,10 +45,10 @@
 			<h1 class="display-4 cal text-white text-center">Gallery</h1>
 			<div class="card-columns">
 				<div class="card">
-					<img class="card-img img-thumbnail" src="res/gal1.jpg" alt="Card image">
+					<img class="card-img img-thumbnail" src="res/picture-of-us.jpg" alt="Card image">
 				</div>
 				<div class="card">
-					<img class="card-img img-thumbnail" src="res/gal2.jpg" alt="Card image">
+					<img class="card-img img-thumbnail" src="res/gal1.jpg" alt="Card image">
 				</div>
 				<div class="card">
 					<img class="card-img img-thumbnail" src="res/gal3.jpg" alt="Card image">
@@ -59,8 +59,32 @@
 				<div class="card">
 					<img class="card-img img-thumbnail" src="res/gal5.jpg" alt="Card image">
 				</div>
+				<div class="card">
+					<img class="card-img img-thumbnail" src="res/gal6.jpg" alt="Card image">
+				</div>
 			
 			</div>
+		</div>
+		
+		<div id="rsvp" class="jumbotron empty">
+			<h1 class="display-4 cal text-secondary text-center">RSVP</h1>
+			
+			<blockquote class="blockquote text-center text-secondary">
+				<p>Enter the name written on your invitation</p>
+			</blockquote>
+			
+			<form>
+				<div class="form-group">
+					<label for="name" class="text-secondary">Name</label>
+					<input type="text" class="form-control" id="inputName">
+				</div>
+				<div class="form-group">
+					<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
+					<textarea class="form-control" rows="3" id="inputDiet"></textarea>
+				</div>
+				<button type="submit" class="btn btn-secondary mb-2">Submit</button>
+			</form>
+			
 		</div>
 	</body>
 		
