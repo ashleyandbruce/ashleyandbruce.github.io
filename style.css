@@ -34,22 +34,18 @@ html{
 	background: white;
 }
 
-.para1{
+.para-index{
 	background-image: url("res/picture-of-us.jpg");
 }
-.para3{
-	background-image: url("res/gal3.jpg");
-}
-.para4{
+.para-travel{
 	background-image: url("res/gal1.jpg");
 }
-.para6{
+.para-details{
 	background-image: url("res/gal6.jpg");
 }
-.para7{
+.para-content{
 	background-image: url("res/wood3.jpg");
 }
-
 
 .bg-none{
 	background: none;
@@ -57,12 +53,12 @@ html{
 
 .jumbotron{
 	margin-bottom: 0;
+	-webkit-margin-bottom: 0;
+	-moz-margin-bottom: 0;
+	-o-margin-bottom: 0;
 }
 
 .card-deck, .card-column{
 	padding: 30px;
 }
 
-.map{
-	min-height: 500px;
-}
