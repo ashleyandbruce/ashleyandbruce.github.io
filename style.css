@@ -21,9 +21,12 @@ html{
 
 .parallax{
 	min-height: 600px;
-	background-attachment: fixed;
 	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-position: 50% 50%;
+	background-attachment: fixed;
 }
 
 .empty{
