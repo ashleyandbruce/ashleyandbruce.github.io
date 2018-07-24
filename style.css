@@ -14,6 +14,14 @@ html{
 	height: 100%;
 	
 }
+
+.cal{
+	font-family: calligraphy;
+}
+.tw{
+	font-family: type-writer;
+}
+
 .navbar-static{
 	position: static;
 	top:0;
@@ -66,4 +74,37 @@ html{
 	-o-background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+.parallax{
+	min-height: 600px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.empty{
+	background: white;
+}
+
+.para1{
+	background-image: url("res/picture-of-us.jpg");
+}
+
+.para2{
+	background-image: url("res/wood.jpg");
+}
+
+.para3{
+	background-image: url("res/motel.jpg");
+}
+.para4{
+	background-image: url("res/luggage.jpg");
+}
+
+.jumbotron{
+	margin-bottom: 0;
+}
+
+.card-deck, .card-columns{
+	padding: 30px;
 }
