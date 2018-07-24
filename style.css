@@ -1,32 +1,16 @@
 @font-face{
-	font-family: type-writer;
-	src: url(font/typewriter.ttf);	
-}
-
-@font-face{
 	font-family: calligraphy;
 	font-style: bold;
 	src: url(font/broken-heart.ttf);
 }
 
 html{
-
 	height: 100%;
-	
 }
 
 .cal{
 	font-family: calligraphy;
 }
-.tw{
-	font-family: type-writer;
-}
-
-.navbar-static{
-	position: static;
-	top:0;
-}
-
 .text-none{
 	text-decoration: none;
 }
@@ -85,7 +69,7 @@ html{
 	margin-bottom: 0;
 }
 
-.card-deck, .card-columns{
+.card-deck {
 	padding: 30px;
 }
 
