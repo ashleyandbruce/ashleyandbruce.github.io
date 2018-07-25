@@ -19,21 +19,6 @@ html{
 	text-decoration: none;
 }
 
-.parallax{
-	min-height: 600px;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-.empty{
-	background: white;
-}
-
 .para-index{
 	background-image: url("res/picture-of-us.jpg");
 }
@@ -46,6 +31,22 @@ html{
 .para-content{
 	background-image: url("res/wood3.jpg");
 }
+
+.parallax{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover !important;
+	min-height: 600px;
+}
+
+.empty{
+	background: white;
+}
+
 
 .bg-none{
 	background: none;
