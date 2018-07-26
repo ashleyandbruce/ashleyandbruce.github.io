@@ -4,14 +4,6 @@
 	src: url(font/broken-heart.ttf);
 }
 
-html{
-	height: 100%;
-}
-
-body{
-	height: 100%;
-}
-
 .cal{
 	font-family: calligraphy;
 }
@@ -47,11 +39,6 @@ body{
 	min-height: 600px;
 }
 
-.empty{
-	background: white;
-}
-
-
 .bg-none{
 	background: none;
 }
@@ -63,7 +50,7 @@ body{
 	-o-margin-bottom: 0;
 }
 
-.card-deck, .card-column{
+.card-deck, .card-columns{
 	padding: 30px;
 }
 
