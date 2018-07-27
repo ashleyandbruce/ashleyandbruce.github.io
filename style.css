@@ -15,14 +15,17 @@
 	text-decoration: none;
 }
 
-.para-index{
-	background-image: url("res/picture-of-us.jpg");
+.para-index{ 
+	background-image: url("res/index.jpg");
 }
 .para-travel{
-	background-image: url("res/gal1.jpg");
+	background-image: url("res/travel.jpg");
 }
 .para-details{
-	background-image: url("res/gal6.jpg");
+	background-image: url("res/details.jpg");
+}
+.para-registry{
+	background-image: url("res/registry.jpg");
 }
 .para-content{
 	background-image: url("res/wood-small.jpg");
