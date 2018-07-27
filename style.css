@@ -16,8 +16,13 @@
 }
 
 .para-index{ 
-	background-image: url("res/index.jpg");
+	background-image: url("res/index-color.jpg");
 }
+
+.para-index-2{
+	background-image: url("res/index-2.png");
+}
+
 .para-travel{
 	background-image: url("res/travel.jpg");
 }
