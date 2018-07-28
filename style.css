@@ -3,6 +3,39 @@
 	font-style: bold;
 	src: url(font/broken-heart.ttf);
 }
+html, body{
+	
+	height: 100%;
+	width: 100%;	
+}
+#index-1{
+	background-image: url("res/index.jpg");
+	height: 100%;
+}
+#index-3{
+	background-image: url("res/index-2.jpg");
+	height: 70%;
+}
+
+#index-4{
+	overflow-y: auto;
+}
+
+#index-4 img{
+	min-height: 400px;
+}
+
+.full-bg-img{
+	background: no-repeat center center fixed;
+	display:table;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
 
 .cal{
 	font-family: calligraphy;
@@ -16,11 +49,11 @@
 }
 
 .para-index{ 
-	background-image: url("res/index-color.jpg");
+	background-image: url("res/index.jpg");
 }
 
 .para-index-2{
-	background-image: url("res/index-2.png");
+	background-image: url("res/index-2.jpg");
 }
 
 .para-travel{
@@ -61,5 +94,6 @@
 .card-deck, .card-columns{
 	padding: 30px;
 }
+
 
 
