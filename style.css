@@ -12,17 +12,9 @@ html, body{
 	background-image: url("res/index.jpg");
 	height: 100%;
 }
-#index-3{
-	background-image: url("res/index-2.jpg");
-	height: 70%;
-}
-
 #index-4{
-	overflow-y: auto;
-}
-
-#index-4 img{
-	min-height: 400px;
+	background-image: url("res/index-2.jpg");
+	height: 65%;
 }
 
 .full-bg-img{
@@ -36,6 +28,9 @@ html, body{
 	-o-background-size: cover;
 }
 
+.display-3, .display-4{
+	font-family: calligraphy;
+}
 
 .cal{
 	font-family: calligraphy;
