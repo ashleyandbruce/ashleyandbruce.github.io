@@ -13,14 +13,14 @@
 	<!--Navigation Bar-->
 	
 		<header>
-			<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+			<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
 				<div class="container-fluid">
-				
-					<!--<a class="pt-2 text-secondary text-none cal" href="index.html"><h2>B&A</h2></a>-->
-					
+								
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
 						<span class="navbar-toggler-icon"></span>
 					</button>
+					
+					<!--<a class="navbar-brand navbar-text cal" href="index.html">Bruce + Ashley</a>-->
 					
 					<div class="collapse navbar-collapse justify-content-center" id="navbarToggler">
 						<ul class="navbar-nav">
@@ -36,10 +36,14 @@
 							<li class="nav-item p-1 pr-5">
 								<a class="nav-link" href="registry.html">REGISTRY</a>
 							</li>
+							<li class="nav-item p-1">
+								<a class="nav-link" href="index.html#index-5">RSVP</a>
+							</li>
 						</ul>
 					</div>
-					
-					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">RSVP</button>
+					<!--<form class="form-inline">
+						<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">RSVP</button>
+					</form>-->
 					
 				</div>
 			</nav>
@@ -47,11 +51,9 @@
 		
 		<!--Header section-->
 		
-		<div id="index-1" class="full-bg-img pt-5">
-			<div class="p-5 d-flex flex-column justify-content-center align-items-xs-center align-items-sm-start w-100 h-100 text-center">
-				<h1 class="text-white cal">Bruce & Ashley</h1>
-				<h4 class="text-white display-4 font-weight-bold">SHE SAID YES</h4>
-				<h5 class="text-white font-weight-normal">07.20.2019</h5>
+		<div id="index-1" class="full-bg-img parallax-bg pt-5">
+			<div class="p-5 d-flex flex-column justify-content-center align-items-xs-center align-items-sm-start w-100 h-100">
+				<img class="img-fluid" src="res/names-alt.png"/>
 			</div>
 		</div>
 		
@@ -85,60 +87,71 @@
 		
 		<div id = "index-3" class="container-fluid pt-5 text-secondary">
 			<div class="row">
-				<div class="col-sm-12 col-md-6 pl-0 pr-1 pb-1">
+				<div class="col-sm-12 col-md-6 px-0 pr-md-1 pb-1">
 					<img class="img-fluid" src="res/gallery1.jpg"/>
 				</div>
-				<div class="col-sm-12 col-md-6 pr-0 pl-1 pb-1">
+				<div class="col-sm-12 col-md-6 px-0 pl-md-1 pb-1 pt-1 pt-md-0">
 					<img class="img-fluid" src="res/gallery2.jpg"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-md-6 pl-0 pr-1 pt-1 pb-1">
+				<div class="col-sm-12 col-md-6 px-0 pr-md-1 pb-1 pt-1">
 					<img class="img-fluid" src="res/gallery3.jpg"/>
 				</div>
-				<div class="col-sm-12 col-md-6 pr-0 pl-1 pt-1 pb-1">
+				<div class="col-sm-12 col-md-6 px-0 pl-md-1 pb-1 pt-1">
 					<img class="img-fluid" src="res/gallery4.jpg"/>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-md-6 pl-0 pr-1 pt-1">
+				<div class="col-sm-12 col-md-6 px-0 pr-md-1 pb-1 pt-1">
 					<img class="img-fluid" src="res/gallery5.jpg"/>
 				</div>
-				<div class="col-sm-12 col-md-6 pr-0 pl-1 pt-1">
+				<div class="col-sm-12 col-md-6 px-0  pl-md-1 pb-1 pt-1">
 					<img class="img-fluid" src="res/gallery6.jpg"/>
 				</div>
 			</div>
-			<div class="row pt-2">
+			<div class="row">
 				<div class="col">
 					<footer class="blockquote-footer">Photos By Vicki Currie</footer>
 				</div>
 			</div>
-			<div class="row text-center">
-				<div class="col pt-4 p-5">
-					<a href="https://1drv.ms/f/s!At0JVsmSVqgfgs4ExPEANk2KAAwvkA" 
-					target="_blank" 
-					class="btn btn-lg btn-outline-secondary">View More</a>
+		</div>
+		
+		<!--RSVP Section-->
+		<div id="index-5" class="container-fluid text-secondary pt-5">
+			<div class="row">
+				<div class="col">
+					<h1 class="display-4 text-center cal">RSVP</h1>
 				</div>
 			</div>
+			<form>
+				<div class="form-group">
+					<label for="name" class="text-secondary">Name</label>
+					<input type="text" class="form-control" id="inputName">
+				</div>
+				<div class="form-group">
+					<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
+					<textarea class="form-control" rows="3" id="inputDiet"></textarea>
+					<br><button type="submit" class="btn btn-secondary">Submit</button>
+				</div>
+			</form>
 		</div>
 			
 		<!--Parallax Section-->
 		
-		<div id="index-4" class="full-bg-img pt-5"></div>
+		<div id="index-4" class="full-bg-img parallax-bg pt-5"></div>
 		
 		<!--RSVP Modal-->
 				
-		<div class="modal text-secondary" id="myModal">
+		<!--<div class="modal text-secondary" id="myModal">
 			<div class="modal-dialog">
 				<div class="modal-content">
 
-					<!-- Modal Header -->
 					<div class="modal-header">
 						<h4 class="modal-title cal">RSVP</h4>
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
 
-					<!-- Modal body -->
 					<div class="modal-body">
 						<form>
 							<div class="form-group">
@@ -152,7 +165,6 @@
 						</form>
 					</div>
 
-					<!-- Modal footer -->
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-secondary">Submit</button>
 						<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
@@ -160,7 +172,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div>-->
 		
 	<!--Footer-->
 	
@@ -195,110 +207,10 @@
 			</div>
 		</footer>
 		
-		
-		<!--<header>
-			<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<a class="text-none text-secondary cal pt-2" href="index.html"><h2>B&A</h2></a>
-				
-				<div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
-					<a class=" pr-4 text-none text-secondary text-nowrap" href="details.html"><h6>DETAILS</h6></a>
-					<a class=" pr-4 text-none text-secondary text-nowrap" href="travel.html"><h6>TRAVEL</h6></a>
-					<a class=" pr-4 text-none text-secondary text-nowrap" href="registry.html"><h6>REGISTRY</h6></a>
-					<a class="text-none text-secondary text-nowrap" href="#rsvp"><h6>RSVP</h6></a>
-				</div>
-			</nav>
-		</header>
-		<div class="pt-5"/>
-		
-		<div class="jumbotron parallax para-index">
-			<div class="card bg-none border-0 float-left">
-				<img class="card-img-top" src="res/names-alt.png"/>
-			</div>
-		</div>
-		<div id="our-story" class="jumbotron bg-white">
-			<h1 class="display-4 cal text-secondary text-center">Our Story</h1>
-			
-			<blockquote class="blockquote text-center text-secondary">
-				<p>“You come to love not by finding the perfect person, but by seeing an imperfect person perfectly.”</p>
-				<footer class="blockquote-footer">Sam Keen</footer>
-			</blockquote>
-			<div class="row">
-				<div class="col-sm-12 col-md-8 offset-md-2">
-					<p class="text-secondary">It all began in Computer Science 231 among a sea of 0's and 1's. Ashley and Bruce were both in their first year of Computer Science. Bruce first noticed Ashley sitting in front of him, she stuck out in his mind because of her long brown, curly hair and the 
-						irregular way she sat - the only one in the room with her legs crossed sitting in her chair. They crossed paths again at a party hosted by a mutual friend and quickly became good friends. The following summer Ashley invited Bruce on a camping trip in Banff 
-						National Park. Sparks flew over a bonfire as they roasted marshmallows and hotdogs, they have been inseperable ever since.</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="jumbotron parallax para-index-2"></div>
-		
-		<div id="gallery" class="jumbotron parallax para-content">
-			<h1 class="display-4 cal text-white text-center">Gallery</h1>
-			<div class="card-columns">
-			</div>
-			
-			</div>
-		</div>
-		
-		<div id="rsvp" class="jumbotron bg-white">
-			<h1 class="display-4 cal text-secondary text-center">RSVP</h1>
-			
-			<blockquote class="blockquote text-center text-secondary">
-				<p>Enter the name written on your invitation</p>
-			</blockquote>
-			
-			<form>
-				<div class="form-group">
-					<label for="name" class="text-secondary">Name</label>
-					<input type="text" class="form-control" id="inputName">
-				</div>
-				<div class="form-group">
-					<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
-					<textarea class="form-control" rows="3" id="inputDiet"></textarea>
-				</div>
-				<button type="submit" class="btn btn-secondary mb-2">Submit</button>
-			</form>
-			
-		</div>
-		
-		<footer>
-			<div class="container-fluid text-white bg-secondary">
-				<div class="row p-3">
-					<div class="col-sm-6 col-md-3 pt-3">
-						<h6>CONTACT</h6>
-						<span class="fa fa-envelope pr-2"></span>
-						<a class="text-light text-none" href="mailto:ashleycurr@live.ca">ashleycurr@live.ca</a>
-						<br><span class="fa fa-phone pr-2"></span>
-						<a class="text-light text-none" href="tel:403-813-3528">(403) 813-3528</a>
-					</div>
-					<div class="col-sm-6 col-md-3 col-lg-3 pt-3">
-						<h6>ABOUT US</h6>
-						<a class="text-light text-none" href="index.html#our-story">Our Story</a>
-						<br><a class="text-light text-none" href="index.html#gallery">Photo Gallery</a>
-					</div>
-					<div class="col-sm-6 col-md-3 pt-3">
-						<h6>EVENT DETAILS</h6>
-						<a class="text-light text-none" href="details.html#general">General</a>
-						<br><a class="text-light text-none" href="details.html#schedule">Schedule</a>
-					</div>
-					<div class="col-sm-6 col-md-3 pt-3">
-						<h6>We'd love to see you there!</h6>
-						<br><a class="btn btn-light text-secondary" href="index.html#rsvp">RSVP</a>
-					</div>
-				</div>
-				<div class="row p-2">
-					<div class="col text-white text-center"><small>Created By Ashley Currie</small></div>
-				</div>
-			</div>
-		</footer>-->
 	</body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	<script src="parallax.js"></script>
   </body>
 </html>

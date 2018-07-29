@@ -14,7 +14,7 @@ html, body{
 }
 #index-4{
 	background-image: url("res/index-2.jpg");
-	height: 65%;
+	height: 50%;
 }
 
 .full-bg-img{
@@ -27,6 +27,20 @@ html, body{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 }
+
+/*
+.full-bg-img{
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display:table;
+	position: relative;
+	width: 100%;
+}
+*/
 .cal{
 	font-family: calligraphy;
 }
