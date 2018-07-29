@@ -36,11 +36,10 @@
 							<li class="nav-item p-1 pr-5">
 								<a class="nav-link" href="registry.html">REGISTRY</a>
 							</li>
-							<li class="nav-item p-1 pr-5">
-								<a class="nav-link" href="#rsvp">RSVP</a>
-							</li>
 						</ul>
 					</div>
+					
+					<button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#myModal">RSVP</button>
 					
 				</div>
 			</nav>
@@ -118,7 +117,7 @@
 				<div class="col pt-4 p-5">
 					<a href="https://1drv.ms/f/s!At0JVsmSVqgfgs4ExPEANk2KAAwvkA" 
 					target="_blank" 
-					class="btn btn-lg btn-outline-secondary">Full Gallery</a>
+					class="btn btn-lg btn-outline-secondary">View More</a>
 				</div>
 			</div>
 		</div>
@@ -127,27 +126,38 @@
 		
 		<div id="index-4" class="full-bg-img pt-5"></div>
 		
-		<!--RSVP Section-->
-		
-		<div id="index-5" class="container-fluid p-5 text-secondary">
-			<div class="row">
-				<div class="col">
-					<h1 class="display-4 text-center cal">RSVP</h1>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<form>
-						<div class="form-group">
-							<label for="name" class="text-secondary">Name</label>
-							<input type="text" class="form-control" id="inputName">
-						</div>
-						<div class="form-group">
-							<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
-							<textarea class="form-control" rows="3" id="inputDiet"></textarea>
-						</div>
-						<button type="submit" class="btn btn-secondary mb-2">Submit</button>
-					</form>
+		<!--RSVP Modal-->
+				
+		<div class="modal text-secondary" id="myModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title cal">RSVP</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="name" class="text-secondary">Name</label>
+								<input type="text" class="form-control" id="inputName">
+							</div>
+							<div class="form-group">
+								<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
+								<textarea class="form-control" rows="3" id="inputDiet"></textarea>
+							</div>
+						</form>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-secondary">Submit</button>
+						<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -176,7 +186,7 @@
 					</div>
 					<div class="col-sm-6 col-md-3 pt-3">
 						<h6>We'd love to see you there!</h6>
-						<br><a class="btn btn-light text-secondary" href="index.html#index-5">RSVP</a>
+						<br><button type="button" class="btn btn-light text-secondary" data-toggle="modal" data-target="#myModal">RSVP</button>
 					</div>
 				</div>
 				<div class="row p-2">
