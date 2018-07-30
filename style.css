@@ -9,14 +9,22 @@ html, body{
 	width: 100%;	
 }
 #index-1{
+	height: 100%;
+	width: 100%;
+}
+
+#index-1-img {
 	background-image: url("res/index.jpg");
 	height: 100%;
+	width: 100%;
 }
+
 #index-4{
 	background-image: url("res/index-2.jpg");
 	height: 50%;
+	width: 100%;
 }
-
+/*
 .full-bg-img{
 	background: no-repeat center center fixed;
 	display:table;
@@ -26,23 +34,19 @@ html, body{
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform: translateZ(0x);
 }
-
-/*
+*/
 .full-bg-img{
+	background: no-repeat center center scroll;
+	display:table;
+	position: fixed;
+	z-index: -2;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	display:table;
-	position: relative;
-	width: 100%;
 }
-*/
+
 .cal{
 	font-family: calligraphy;
 }
