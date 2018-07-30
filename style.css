@@ -3,106 +3,39 @@
 	font-style: bold;
 	src: url(font/broken-heart.ttf);
 }
+
 html, body{
 	height: 100%;
 	width: 100%;	
 }
+
 #index-1{
 	height: 100%;
 	width: 100%;
 }
 
-#index-1-img {
-	background-image: url("res/index.jpg");
+#travel-1{
 	height: 100%;
 	width: 100%;
-	z-index: -1;
+}
+
+#registry-1{
+	height: 80%;
+	width: 100%;
+}
+
+#details-1{
+	height: 100%;
+	width: 100%;
 }
 
 #index-4{
-	height: 50%;
+	height: 200px;
 	width: 100%;
-}
-
-#index-4-img{
-	background-image: url("res/index-2.jpg");
-	height: 50%;
-	width: 100%;
-}
-/*
-.full-bg-img{
-	background: no-repeat center center fixed;
-	display:table;
-	position: relative;
-	width: 100%;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-}
-*/
-.full-bg-img{
-	background: no-repeat center center scroll;
-	display:table;
-	position: fixed;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 }
 
 .cal{
 	font-family: calligraphy;
-}
-.text-none{
-	text-decoration: none;
-}
-
-.text-none:hover{
-	text-decoration: none;
-}
-
-.para-index{ 
-	background-image: url("res/index.jpg");
-}
-
-.para-index-2{
-	background-image: url("res/index-2.jpg");
-}
-
-.para-travel{
-	background-image: url("res/travel.jpg");
-}
-.para-details{
-	background-image: url("res/details.jpg");
-}
-.para-registry{
-	background-image: url("res/registry.jpg");
-}
-.para-content{
-	background-image: url("res/wood-small.jpg");
-}
-
-.parallax{
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover !important;
-	min-height: 600px;
-}
-
-.bg-none{
-	background: none;
-}
-
-.jumbotron{
-	margin-bottom: 0;
-	-webkit-margin-bottom: 0;
-	-moz-margin-bottom: 0;
-	-o-margin-bottom: 0;
 }
 
 .card-deck, .card-columns{
