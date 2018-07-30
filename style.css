@@ -26,6 +26,8 @@ html, body{
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0x);
 }
 
 /*
