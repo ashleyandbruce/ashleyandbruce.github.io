@@ -3,7 +3,6 @@
 	font-style: bold;
 	src: url(font/broken-heart.ttf);
 }
-
 html, body{
 	height: 100%;
 	width: 100%;	
@@ -12,6 +11,43 @@ html, body{
 #index-1{
 	height: 100%;
 	width: 100%;
+}
+
+#intro-image{
+	background: url("res/index.jpg") no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -3;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#intro-image-blur{
+	background: url("res/index-blur.jpg") no-repeat center center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -2;
+	opacity: 0;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#intro-image-fade{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: white;
+	z-index: -1;
+	opacity: 0;
+	pointer-events: none;
 }
 
 #travel-1{
@@ -29,17 +65,8 @@ html, body{
 	width: 100%;
 }
 
-#index-4{
-	height: 200px;
-	width: 100%;
-}
-
 .cal{
 	font-family: calligraphy;
-}
-
-.card-deck, .card-columns{
-	padding: 30px;
 }
 
 
