@@ -13,6 +13,10 @@ html, body{
 	width: 100%;
 }
 
+#index-2{
+	opacity: 1;
+}
+
 #intro-image{
 	background: url("res/index.jpg") no-repeat center center;
 	background-size: cover;

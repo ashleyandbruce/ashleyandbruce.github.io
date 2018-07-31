@@ -11,7 +11,7 @@ $(document).ready(function(){
 	
 	var tween2 = (new TimelineMax).to("#intro-image-fade", 1, {
 			css: {
-				opacity: 1
+				opacity: 0.9
 			},
             ease: Circ.easeOutExpo
      });
@@ -32,10 +32,17 @@ $(document).ready(function(){
         },
         ease: Circ.easeOutExpo
      });
-         
+	 
+	var tween5 = (new TimelineMax).from("#index-2", 1, {
+            css: {
+				opacity: 0				
+			},
+            ease: Circ.easeOutExpo
+     });
+          
    var scene1 = new ScrollMagic.Scene({
-        triggerElement: '#index-2',
-        duration: 400,
+        triggerElement: '#index-6',
+        duration: 500,
         triggerHook: 1,
         offset: 0
     })
@@ -44,7 +51,7 @@ $(document).ready(function(){
 	
 	var scene2 = new ScrollMagic.Scene({
         triggerElement: 0,
-        duration: 500,
+        duration: 900,
         triggerHook: 1,
         offset: 0
     })
@@ -68,5 +75,14 @@ $(document).ready(function(){
     })
 	.setTween(tween4)
 	.addTo(controller);
+	
+	var scene5 = new ScrollMagic.Scene({
+           triggerElement: "#index-2",
+           duration: 1000,
+           triggerHook: 1,
+           offset: 20
+     })
+	 .setTween(tween5)
+	 .addTo(controller);
 	
 });
