@@ -5,7 +5,7 @@
 }
 html, body{
 	height: 100%;
-	width: 100%;	
+	width: 100%;
 }
 
 #index-1{
@@ -54,24 +54,21 @@ html, body{
 	pointer-events: none;
 }
 
-#travel-1{
-	height: 100%;
-	width: 100%;
-}
 
-#registry-1{
-	height: 80%;
-	width: 100%;
-}
-
-#details-1{
-	height: 100%;
-	width: 100%;
-}
-
-.cal{
+.display-3{
+	font-size: 100vph;
 	font-family: calligraphy;
 }
 
+p{
+	font-size: 1.2em;
+	text-indent: 10px;
+}
 
+.nav-link{
+	letter-spacing: 6px;
+}
 
+.navbar-brand{
+	letter-spacing: 6px;
+}

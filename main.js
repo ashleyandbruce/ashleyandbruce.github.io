@@ -11,7 +11,7 @@ $(document).ready(function(){
 	
 	var tween2 = (new TimelineMax).to("#intro-image-fade", 1, {
 			css: {
-				opacity: 0.9
+				opacity: 0.8
 			},
             ease: Circ.easeOutExpo
      });
@@ -84,5 +84,18 @@ $(document).ready(function(){
      })
 	 .setTween(tween5)
 	 .addTo(controller);
+	 
+	 scrollDown();
 	
 });
+
+
+
+function scrollDown(){
+	
+	$(".btn-scroll").click(function (){
+        $('html, body').animate({
+            scrollTop: $("#index-1").offset().top
+        }, 'slow');
+     });
+}
