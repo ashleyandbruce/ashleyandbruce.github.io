@@ -71,6 +71,7 @@ html, body{
 	font-size: 5.5em;
 	letter-spacing: 6px;
 	font-weight: 300;
+	text-align: center;
 	
 	@include media-breakpoint-up(sm) {
 		font-size: 3.0em;
@@ -112,5 +113,9 @@ p{
 	@include media-breakpoint-up(md) {
 		font-size: 10px;
 	}
+}
+
+.btn:hover{
+	background-color: #e6e6ff;
 }
 
