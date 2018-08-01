@@ -11,7 +11,7 @@ $(document).ready(function(){
 	
 	var tween2 = (new TimelineMax).to("#intro-image-fade", 1, {
 			css: {
-				opacity: 0.8
+				opacity: 1
 			},
             ease: Circ.easeOutExpo
      });
