@@ -1,13 +1,8 @@
-@font-face{
-	font-family: calligraphy;
-	font-style: bold;
-	src: url(font/broken-heart.ttf);
-}
-
 html, body{
 	height: 100%;
 	width: 100%;
 }
+
 /*
 #index-1{
 	height: 100%;
@@ -55,7 +50,6 @@ html, body{
 	pointer-events: none;
 }
 */
-
 .intro-header-image{
 	height: 100%;
 	width: 100%;
@@ -68,14 +62,10 @@ html, body{
 
 .header-title{
 	color: white;
-	font-size: 5.5em;
+	font-size: 90px;
 	letter-spacing: 6px;
 	font-weight: 300;
 	text-align: center;
-	
-	@include media-breakpoint-up(sm) {
-		font-size: 3.0em;
-	}
 }
 
 .header-title-wrap{
@@ -109,13 +99,37 @@ p{
 	font-size: 20px;
 	text-indent: 10px;
 	text-align: center;
-	
-	@include media-breakpoint-up(md) {
-		font-size: 10px;
-	}
 }
 
 .btn:hover{
 	background-color: #e6e6ff;
 }
 
+@media (max-width: 575.98px) {
+	.header-title{
+		font-size: 60px;
+	}
+	.navbar-brand{
+		font-size: 15px;
+	}
+	.nav-link{
+		font-size: 13px;
+	}
+	p{
+		font-size: 15px;
+	}
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	.header-title{
+		font-size: 70px;
+	}
+	.navbar-brand{
+		font-size: 18px;
+	}
+	.nav-link{
+		font-size: 17px;
+	}
+	
+}
