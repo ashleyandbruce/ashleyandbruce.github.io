@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>About Us - Bruce + Ashley</title>
 		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -46,48 +46,20 @@
 		
 	<!--Header section-->
 	
-
-	<!--<div id="index-1" class="pt-5 pb-5">
-		<div id="intro-image" class="bg-img"></div>
-		<div id="intro-image-blur" class="bg-img"></div>
-		<div id="intro-image-fade"></div>
-		<!--<div class="p-5 d-flex flex-column justify-content-center align-items-xs-center align-items-sm-start w-100 h-100">
-			<img class="img-fluid" src="res/name-alt-2.png"/>
-		</div>
-		<!--<div class="text-center">
-			<button class="btn-scroll btn" type="button">
-				<span class="fa fa-chevron-down"></span>
-			</button>
-		</div>
-	</div>-->
-
 		
-	<div class="pt-5 intro-header-image top-section" data-parallax="scroll" data-image-src="res/index.jpg">
+	<div class="pt-5 intro-header-image" data-parallax="scroll" data-image-src="res/index.jpg">
 		<div class="header-title-wrap d-flex flex-column justify-content-center align-items-center">
 			<div class="header-title">OUR WEDDING</div>
-		</div>
-	</div>
-
-	<!--Our Story Section-->
-
-	
-	<div id="index-2" class="container text-secondary pt-5 pb-5">
-		<div class="row pt-5">
-			<div class="col section-title">Our Story</div>
-		</div>
-		<div class="row pt-5">
-			<div class="offset-md-2 col-sm-12 col-md-8">
-				<p>It all began in Computer Science 231 among a sea of 0's and 1's. Ashley and Bruce were both in their first year of Computer Science. Bruce first noticed Ashley sitting in front of him, she stuck out in his mind because of her long brown, curly hair and the 
-					irregular way she sat - the only one in the room with her legs crossed sitting in her chair. They crossed paths again at a party hosted by a mutual friend and quickly became good friends. The following summer Ashley invited Bruce on a camping trip in Banff 
-					National Park. Sparks flew over a bonfire as they roasted marshmallows and hotdogs, they have been inseparable ever since.</p>
+			<div class="scroll-btn dwn" onclick="scroll_down()">
+				<i class="fas fa-chevron-down fa-2x"></i>
 			</div>
 		</div>
 	</div>
-	
+
 	<!--Where/When Section-->
 	
-	<div id ="index-6" class="container text-secondary pt-5 pb-5">
-		<div class="row p-5">
+	<div class="container top-section text-secondary pt-5 pb-5">
+		<div class="row">
 			<div class="col section-title">The Wedding</div>
 		</div>
 		<div class="row">
@@ -108,10 +80,27 @@
 			</div>
 		</div>
 	</div>
+		
+	<!--Our Story Section-->
+
+	
+	<div class="container text-secondary pt-5 pb-5">
+		<div class="row">
+			<div class="col section-title">Our Story</div>
+		</div>
+		<div class="row">
+			<div class="offset-md-2 col-sm-12 col-md-8">
+				<p>It all began in Computer Science 231 among a sea of 0's and 1's. Ashley and Bruce were both in their first year of Computer Science. Bruce first noticed Ashley sitting in front of him, she stuck out in his mind because of her long brown, curly hair and the 
+					irregular way she sat - the only one in the room with her legs crossed sitting in her chair. They crossed paths again at a party hosted by a mutual friend and quickly became good friends. The following summer Ashley invited Bruce on a camping trip in Banff 
+					National Park. Sparks flew over a bonfire as they roasted marshmallows and hotdogs, they have been inseparable ever since.</p>
+			</div>
+		</div>
+	</div>
+	
 	
 	<!--Gallery Section-->
 	
-	<div id = "index-3" class="container-fluid text-secondary pt-5 pb-5">
+	<div class="container-fluid text-secondary pt-5 pb-5">
 		<div class="row">
 			<div class="col-sm-12 col-md-6 px-0 pr-md-1 pb-1">
 				<img class="img-fluid" src="res/gallery1.jpg"/>
@@ -143,11 +132,20 @@
 		</div>
 	</div>
 	
-	<footer class="pb-5 bg-white border-top">
-		<div class="container-fluid text-secondary text-center p-5">
-			<p><i>“You come to love not by finding the perfect person, but by seeing an imperfect person perfectly.”</i></p>
-			<p>-Sam Keen</p>
+	<footer class="pb-5 footer-section">
+	
+		<div class="container-fluid p-5">
+			<div class="row">
+				<div class="col">
+					<div class="scroll-btn up" onclick="scroll_up()">
+						<i class="fas fa-chevron-up fa-2x"></i>
+					</div>
+					<p><i>“You come to love not by finding the perfect person, but by seeing an imperfect person perfectly.”</i></p>
+					<p>-Sam Keen</p>
+				</div>
+			</div>
 		</div>
+		
 	</footer>
 	
 		
@@ -157,9 +155,8 @@
 	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-	<script src= "main.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>-->
 	<script src="parallax.js-1.5.0/parallax.js"></script>
-	<script src="scroll.js"></script>
+	<script src="main.js"></script>
   </body>
 </html>

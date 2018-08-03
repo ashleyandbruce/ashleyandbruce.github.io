@@ -61,16 +61,16 @@ html, body{
 }
 
 .header-title{
-	color: white;
 	font-size: 90px;
 	letter-spacing: 6px;
-	font-weight: 300;
+	font-weight: lighter;
 	text-align: center;
 }
 
 .header-title-wrap{
 	width: 100%;
 	height: 100%;
+	color: white;
 }
 
 .nav-link{
@@ -87,6 +87,7 @@ html, body{
 	font-size: 30px;
 	text-align: center;
 	color: black;
+	padding: 40px;
 }
 
 .section-sub-title{
@@ -95,14 +96,45 @@ html, body{
 	text-align: center;
 }
 
+.footer-section{
+	text-align: center;
+	color: #6c757d;
+	border-top: 1px solid #dee2e6;
+}
+
 p{
 	font-size: 20px;
 	text-indent: 10px;
 	text-align: center;
+	color: #6c757d;
 }
 
 .btn:hover{
-	background-color: #e6e6ff;
+	background-color: #e1e1ea; 
+}
+
+.scroll-btn{
+	letter-spacing: 6px;
+	cursor: pointer;
+	text-align : center;
+}
+
+.up{
+	
+	background-color: white;
+	border-radius: 50%;
+	border: 1px solid #dee2e6;
+	width: 75px;
+	height: 75px;
+	padding: 18px 0px 5px 5px;
+	display: block;
+	margin: -85px auto 50px;
+}
+
+.dwn{
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
 }
 
 @media (max-width: 575.98px) {
