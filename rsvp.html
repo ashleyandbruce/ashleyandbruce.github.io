@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>RSVP - Bruce + Ashley</title>
+		<title>RSVP | Bruce + Ashley</title>
 
+		<link rel="shortcut icon" type="image/x-icon" href="res/icon.png">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
@@ -26,10 +27,10 @@
 					<div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
 						<ul class="navbar-nav">
 							<li class="nav-item p-1 pr-4">
-								<a class="nav-link" href="details.html">DETAILS</a>
+								<a class="nav-link" href="when.html">WHEN</a>
 							</li>
 							<li class="nav-item p-1 pr-4">
-								<a class="nav-link" href="travel.html">TRAVEL</a>
+								<a class="nav-link" href="details.html">WHERE</a>
 							</li>
 							<li class="nav-item p-1 pr-4">
 								<a class="nav-link" href="registry.html">GIFTS</a>
@@ -46,19 +47,23 @@
 		
 		<!--Header section-->
 		
-		<div class="pt-5 header-image" data-parallax="scroll" data-image-src="res/rsvp.jpg">
+		<div class="pt-5 intro-header-image" data-parallax="scroll" data-image-src="res/rsvp.jpg">
 			<div class="header-title-wrap d-flex flex-column justify-content-center align-items-center">
 				<div class="header-title">RSVP</div>
+				<div class="scroll-btn dwn" onclick="scroll_down()">
+					<i class="fas fa-chevron-down fa-2x"></i>
+				</div>
 			</div>
 		</div>
 		
-		<!--Entry Message-->
+		<!--Entry Section-->
 		
-		<div class="container p-5">
+		<div class="container top-section p-5">
 			<div class="row">
-				<div class="col section-title">Hope to See You There!</div>
-			</div>
-			<div class="row">
+				<div class="col-12 pb-5">
+					<div class="section-title">We Hope to See You There!</div>
+					<div class="section-sub-title">Let us know by July 1, 2019</div>
+				</div>
 				<div class="col offset-2">
 					<form>
 						<div class="form-row">
@@ -70,24 +75,27 @@
 								<label for="last-name" class="text-secondary">Last Name</label>
 								<input type="text" class="form-control" id="input-last-name">
 							</div>
-							<div class="form-group col-md-6 col-sm-12">
+							<div class="form-group col-12">
 								<label for="e-mail" class="text-secondary">E-mail</label>
 								<input type="text" class="form-control" id="input-email">
-							</div>
-							<div class="form-group col-md-6 col-sm-12">
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1">
-									<label class="form-check-label" for="yes">Coming</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option2">
-									<label class="form-check-label" for="no">Can't Make it</label>
-								</div>
 							</div>
 							<div class="form-group col-12">
 								<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
 								<textarea class="form-control" rows="3" id="inputDiet"></textarea>
-								<br><button type="submit" class="btn btn-outline-secondary btn-lg">Submit</button>
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="attendance" class="text-secondary">Will you be there? </label>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1">
+									<label class="form-check-label" for="yes">Yes</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option2">
+									<label class="form-check-label" for="no">No</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-lg">Submit</button>
 							</div>
 						</div>
 					</form>
@@ -99,7 +107,7 @@
 		<!--Footer-->
 		
 		
-		<footer class="pb-5 footer-section">
+		<footer class="pb-5 footer-section dark-section">
 	
 			<div class="container-fluid p-5">
 				<div class="row">

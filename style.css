@@ -3,62 +3,22 @@ html, body{
 	width: 100%;
 }
 
-/*
-#index-1{
-	height: 100%;
-	width: 100%;
-}
-
-#index-2{
-	opacity: 1;
-}
-
-#intro-image{
-	background: url("res/index.jpg") no-repeat center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	z-index: -3;
-	transform: matrix(1, 0, 0, 1, 0, 0);
-}
-
-#intro-image-blur{
-	background: url("res/index-blur.jpg") no-repeat center center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	z-index: -2;
-	opacity: 0;
-	transform: matrix(1, 0, 0, 1, 0, 0);
-}
-
-#intro-image-fade{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: white;
-	z-index: -1;
-	opacity: 0;
-	pointer-events: none;
-}
-*/
 .intro-header-image{
 	height: 100%;
 	width: 100%;
 }
 
-.header-image{
-	width: 100%;
-	height: 90%;
+.card{
+	border: none;
 }
+.card-img{
+	border-radius: 0;
+}
+
+.dark-section{
+	background-color: #f8f9fa;
+}
+
 
 .header-title{
 	font-size: 90px;
@@ -71,6 +31,17 @@ html, body{
 	width: 100%;
 	height: 100%;
 	color: white;
+}
+
+.header-icon{
+	text-align: center;
+	color: #c3c3d5;
+}
+
+.navbar{
+	-webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+	box-shadow: 0 8px 6px -6px #999;	
 }
 
 .nav-link{
@@ -102,6 +73,18 @@ html, body{
 	border-top: 1px solid #dee2e6;
 }
 
+.btn{
+	background-color: #e1e1ea; 
+	color: white;
+	border-radius:0;
+	border: 0.5px #e1e1ea solid; 
+}
+
+.btn:hover{
+	background-color: white; 
+	color: #e1e1ea; 
+}
+
 p{
 	font-size: 20px;
 	text-indent: 10px;
@@ -109,12 +92,7 @@ p{
 	color: #6c757d;
 }
 
-.btn:hover{
-	background-color: #e1e1ea; 
-}
-
 .scroll-btn{
-	letter-spacing: 6px;
 	cursor: pointer;
 	text-align : center;
 }
@@ -124,9 +102,9 @@ p{
 	background-color: white;
 	border-radius: 50%;
 	border: 1px solid #dee2e6;
-	width: 75px;
-	height: 75px;
-	padding: 18px 0px 5px 5px;
+	width: 70px;
+	height: 70px;
+	padding: 17px 0px 20px 0px;
 	display: block;
 	margin: -85px auto 50px;
 }
@@ -137,6 +115,7 @@ p{
 	bottom: 20px;
 }
 
+
 @media (max-width: 575.98px) {
 	.header-title{
 		font-size: 60px;
@@ -146,6 +125,12 @@ p{
 	}
 	.nav-link{
 		font-size: 13px;
+	}
+	.section-title{
+		font-size: 20px;
+	}
+	.section-sub-title{
+		font-size: 15px;
 	}
 	p{
 		font-size: 15px;
@@ -162,6 +147,15 @@ p{
 	}
 	.nav-link{
 		font-size: 17px;
+	}
+	.section-title{
+		font-size: 25px;
+	}
+	.section-sub-title{
+		font-size: 20px;
+	}
+	p{
+		font-size: 18px;
 	}
 	
 }
