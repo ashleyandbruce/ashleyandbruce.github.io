@@ -47,7 +47,7 @@
 		
 		<!--Header section-->
 		
-		<div class="pt-5 intro-header-image" data-parallax="scroll" data-image-src="res/rsvp.jpg">
+		<!--<div class="pt-5 intro-header-image" data-parallax="scroll" data-image-src="res/rsvp.jpg">
 			<div class="header-title-wrap d-flex flex-column justify-content-center align-items-center">
 				<div class="header-title">RSVP</div>
 				<div class="scroll-btn dwn" onclick="scroll_down()">
@@ -56,7 +56,8 @@
 			</div>
 		</div>
 		
-		<!--Entry Section-->
+		
+
 		
 		<div class="container top-section p-5">
 			<div class="row">
@@ -86,6 +87,52 @@
 							<div class="form-group col-md-6 col-sm-12">
 								<label for="attendance" class="text-secondary">Will you be there? </label>
 								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1">
+									<label class="form-check-label" for="yes">Yes</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option2">
+									<label class="form-check-label" for="no">No</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-lg">Submit</button>
+							</div>
+						</div>
+					</form>
+				
+				</div>
+			</div>
+		</div>-->
+		
+		<div class="container-fluid pt-5">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 px-0">
+					<img class="img-fluid" src="res/rsvp.jpg"/>
+				</div>
+				<div class="col-sm-12 col-md-6 p-5">
+					<div class="section-title">RSVP</div>
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="first-name" class="text-secondary">First Name</label>
+								<input type="text" class="form-control" id="input-first-name">
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="last-name" class="text-secondary">Last Name</label>
+								<input type="text" class="form-control" id="input-last-name">
+							</div>
+							<div class="form-group col-12">
+								<label for="e-mail" class="text-secondary">E-mail</label>
+								<input type="text" class="form-control" id="input-email">
+							</div>
+							<div class="form-group col-12">
+								<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
+								<textarea class="form-control" rows="3" id="inputDiet"></textarea>
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="attendance" class="text-secondary">Will you be there? </label>
+								<div class="form-check form-check-inline pl-2">
 									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1">
 									<label class="form-check-label" for="yes">Yes</label>
 								</div>
