@@ -14,7 +14,6 @@ html, body{
 .card-img{
 	border-radius: 0;
 }
-
 .dark-section{
 	background-color: #f8f9fa;
 }
@@ -61,6 +60,28 @@ html, body{
 	padding: 40px;
 }
 
+
+.card-title{
+	color: white;
+}
+
+.card-img-overlay{
+	background-color: rgba(0,0,0, 0.2);
+}
+
+.card-link{
+	color: white;
+	text-decoration: none;
+	position: absolute;
+	bottom: 8px;
+    right: 16px;
+}
+
+.card-link:hover{
+	text-decoration: underline;
+	color: white;
+}
+
 .section-sub-title{
 	font-weight: 300; 
 	font-size: 25px;
@@ -87,7 +108,6 @@ html, body{
 
 p{
 	font-size: 20px;
-	text-indent: 10px;
 	text-align: center;
 	color: #6c757d;
 }
