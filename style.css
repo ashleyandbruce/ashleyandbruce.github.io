@@ -1,3 +1,14 @@
+@font-face{
+	
+	font-family: dancing_in_the_beat;
+	src: url('Dancing In The Beat.ttf');
+}
+
+#map{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+
 html, body{
 	height: 100%;
 	width: 100%;
@@ -8,33 +19,79 @@ html, body{
 	width: 100%;
 }
 
+.parallax-section{
+	height: auto;
+	width: 100%;
+}
+
+.overlay-section{
+	background-color: rgba(255,255,255,0.1);
+}
+
+.img-fill{
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+}
+
 .card{
 	border: none;
+	padding: 2px;
 }
 .card-img{
 	border-radius: 0;
 }
+.card-footer{
+	background-color: white;
+	border: none;
+}
+
+.card-link{
+	color: black;
+}
+
+.card-link:hover{
+	color: grey;
+	text-decoration: none;
+}
+
 .dark-section{
 	background-color: #f8f9fa;
 }
 
+.light-section{
+	background-color: white;
+}
+
+.image-cover{
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	width: 100%;
+	height: 500px;
+}
 
 .header-title{
-	font-size: 90px;
+	font-size: 100px;
 	letter-spacing: 6px;
 	font-weight: lighter;
 	text-align: center;
+	font-family: dancing_in_the_beat;
 }
 
-.header-title-wrap{
-	width: 100%;
-	height: 100%;
+.header-date{
+	font-size: 20px;
+	letter-spacing: 5px;
 	color: white;
-}
-
-.header-icon{
-	text-align: center;
-	color: #c3c3d5;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
 
 .navbar{
@@ -60,26 +117,15 @@ html, body{
 	padding: 40px;
 }
 
-
-.card-title{
-	color: white;
+.header-sub-title{
+	font-family: dancing_in_the_beat;
+	font-size: 70px;
+	color: #e1e1ea; 
+	text-align: center;
 }
 
-.card-img-overlay{
-	background-color: rgba(0,0,0, 0.2);
-}
-
-.card-link{
-	color: white;
-	text-decoration: none;
-	position: absolute;
-	bottom: 8px;
-    right: 16px;
-}
-
-.card-link:hover{
-	text-decoration: underline;
-	color: white;
+.card-header{
+	background: none;
 }
 
 .section-sub-title{
@@ -94,6 +140,12 @@ html, body{
 	border-top: 1px solid #dee2e6;
 }
 
+.header-title-wrap{
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
 .btn{
 	background-color: #e1e1ea; 
 	color: white;
@@ -101,12 +153,14 @@ html, body{
 	border: 0.5px #e1e1ea solid; 
 }
 
+
 .btn:hover{
 	background-color: white; 
 	color: #e1e1ea; 
 }
 
 p{
+	font-weight: 200;
 	font-size: 20px;
 	text-align: center;
 	color: #6c757d;
@@ -135,10 +189,20 @@ p{
 	bottom: 20px;
 }
 
+.arrow-btn{
+	background: none;
+	border: none;
+	color:  #e1e1ea; 
+	cursor: pointer;
+}
+
 
 @media (max-width: 575.98px) {
 	.header-title{
-		font-size: 60px;
+		font-size: 55px;
+	}
+	.header-date{
+		font-size: 9px;
 	}
 	.navbar-brand{
 		font-size: 15px;
@@ -160,7 +224,10 @@ p{
 
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.header-title{
-		font-size: 70px;
+		font-size: 80px;
+	}
+	.header-date{
+		font-size: 15px;
 	}
 	.navbar-brand{
 		font-size: 18px;
