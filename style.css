@@ -14,20 +14,12 @@ html, body{
 	width: 100%;
 }
 
+/*Images*/
+
 .intro-header-image{
 	height: 100%;
 	width: 100%;
 }
-
-.parallax-section{
-	height: auto;
-	width: 100%;
-}
-
-.overlay-section{
-	background-color: rgba(255,255,255,0.1);
-}
-
 .img-fill{
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -37,6 +29,9 @@ html, body{
 	width: 100%;
 	height: 100%;
 }
+
+
+/*Cards*/
 
 .card{
 	border: none;
@@ -49,32 +44,43 @@ html, body{
 	background-color: white;
 	border: none;
 }
-
+.card-header{
+	background: none;
+}
 .card-link{
 	color: black;
 }
-
 .card-link:hover{
 	color: grey;
 	text-decoration: none;
 }
 
+/*Sections*/
+
+.overlay-section{
+	background-color: rgba(255,255,255,0.1);
+}
 .dark-section{
 	background-color: #f8f9fa;
 }
-
 .light-section{
 	background-color: white;
 }
-
-.image-cover{
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	width: 100%;
-	height: 500px;
+.footer-section{
+	text-align: center;
+	color: #6c757d;
+	border-top: 1px solid #dee2e6;
 }
+.header-title-wrap{
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+.map-section{
+	border: 2px solid #e1e1ea; 
+}
+
+/*Text*/
 
 .header-title{
 	font-size: 100px;
@@ -93,6 +99,30 @@ html, body{
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 }
+.p-title{
+	letter-spacing: 6px;
+	font-weight: 300;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
+
+.header-sub-title{
+	font-family: dancing_in_the_beat;
+	font-size: 70px;
+	color: #e1e1ea; 
+	text-align: center;
+}
+
+p{
+	font-weight: 200;
+	font-size: 20px;
+	text-align: center;
+	color: #6c757d;
+}
+
+
+/*Navigation*/
 
 .navbar{
 	-webkit-box-shadow: 0 8px 6px -6px #999;
@@ -108,43 +138,8 @@ html, body{
 	letter-spacing: 6px;
 }
 
-.section-title{
-	letter-spacing: 6px;
-	font-weight: 300;
-	font-size: 30px;
-	text-align: center;
-	color: black;
-	padding: 40px;
-}
 
-.header-sub-title{
-	font-family: dancing_in_the_beat;
-	font-size: 70px;
-	color: #e1e1ea; 
-	text-align: center;
-}
-
-.card-header{
-	background: none;
-}
-
-.section-sub-title{
-	font-weight: 300; 
-	font-size: 25px;
-	text-align: center;
-}
-
-.footer-section{
-	text-align: center;
-	color: #6c757d;
-	border-top: 1px solid #dee2e6;
-}
-
-.header-title-wrap{
-	width: 100%;
-	height: 100%;
-	color: white;
-}
+/*Buttons*/
 
 .btn{
 	background-color: #e1e1ea; 
@@ -157,13 +152,6 @@ html, body{
 .btn:hover{
 	background-color: white; 
 	color: #e1e1ea; 
-}
-
-p{
-	font-weight: 200;
-	font-size: 20px;
-	text-align: center;
-	color: #6c757d;
 }
 
 .scroll-btn{
@@ -196,10 +184,14 @@ p{
 	cursor: pointer;
 }
 
+/*Media Queries*/
 
 @media (max-width: 575.98px) {
 	.header-title{
 		font-size: 55px;
+	}
+	.header-sub-title{
+		font-size: 50px;
 	}
 	.header-date{
 		font-size: 9px;
@@ -210,10 +202,7 @@ p{
 	.nav-link{
 		font-size: 13px;
 	}
-	.section-title{
-		font-size: 20px;
-	}
-	.section-sub-title{
+	.p-title{
 		font-size: 15px;
 	}
 	p{
@@ -226,6 +215,9 @@ p{
 	.header-title{
 		font-size: 80px;
 	}
+	.header-sub-title{
+		font-size: 50px;
+	}
 	.header-date{
 		font-size: 15px;
 	}
@@ -235,11 +227,8 @@ p{
 	.nav-link{
 		font-size: 17px;
 	}
-	.section-title{
-		font-size: 25px;
-	}
-	.section-sub-title{
-		font-size: 20px;
+	.p-title{
+		font-size: 18px;
 	}
 	p{
 		font-size: 18px;
