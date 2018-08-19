@@ -27,6 +27,7 @@ html, body{
 	-o-background-size: cover;
 	background-position: center center;
 	width: 100%;
+	min-height: 400px;
 	height: 100%;
 }
 
