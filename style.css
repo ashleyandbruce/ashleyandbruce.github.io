@@ -5,8 +5,8 @@
 }
 
 #map{
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	filter: grayscale(100%);
+	/*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	/*filter: grayscale(100%);*/
 }
 
 html, body{
@@ -55,6 +55,12 @@ html, body{
 	color: grey;
 	text-decoration: none;
 }
+
+.card-title{
+	letter-spacing: 2px;
+	color: #6c757d;
+}
+
 
 /*Sections*/
 
@@ -126,9 +132,7 @@ p{
 /*Navigation*/
 
 .navbar{
-	-webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-	box-shadow: 0 8px 6px -6px #999;	
+	border-bottom: 1px solid grey;
 }
 
 .nav-link{
@@ -143,6 +147,7 @@ p{
 /*Buttons*/
 
 .btn{
+	letter-spacing: 4px;
 	background-color: #e1e1ea; 
 	color: white;
 	border-radius:0;
@@ -209,6 +214,10 @@ p{
 	p{
 		font-size: 15px;
 	}
+	.nav-item{
+		text-align: center;
+		border-bottom: 1px solid grey;
+	}
 }
 
 
@@ -234,5 +243,8 @@ p{
 	p{
 		font-size: 18px;
 	}
-	
+	.nav-item{
+		text-align: center;
+		border-bottom: 1px solid grey;
+	}
 }

@@ -15,24 +15,27 @@
 	<!--Navigation Bar-->
 	
 		<header>
-			<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+			<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top p-0">
+			
 				<div class="container-fluid">
 				
-					 <a class="navbar-brand py-3" href="index.html">BRUCE + ASHLEY</a>
+					<a class="navbar-brand py-4 pl-3" href="index.html">BRUCE + ASHLEY</a>
 					 
-					 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+					<div class="pr-3">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
 							<span class="navbar-toggler-icon"></span>
-					</button>
+						</button>
+					</div>
 					 
 					<div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
 						<ul class="navbar-nav">
-							<li class="nav-item p-1 pr-4">
+							<li class="nav-item pr-0 pr-md-4 py-3">
 								<a class="nav-link active" href="details.html">DETAILS</a>
 							</li>
-							<li class="nav-item p-1 pr-4">
+							<li class="nav-item pr-0 pr-md-4 py-3">
 								<a class="nav-link" href="registry.html">GIFTS</a>
 							</li>
-							<li class="nav-item p-1">
+							<li class="nav-item py-3">
 								<a class="nav-link" href="rsvp.html">RSVP</a>
 							</li>
 						</ul>
@@ -97,7 +100,8 @@
 
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
 							  <div class="card-body">
-								<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>4:00pm - 5:00pm</div>
+								<div class="card-text pb-1"><i class="fas fa-map-marker-alt fa-1x pr-3"></i>9801 Spalding Rd, Pender Island, BC V0N 2M3</div>
+								<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>July 20 2019, 4PM - 5PM</div>
 								<div class="card-text">The ceremony will be held on the Sea Glass Terrace at the resort. This is located in front of the main hotel overlooking the beach and marina.</div>
 							  </div>
 							</div>
@@ -113,7 +117,8 @@
 							</div>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 							  <div class="card-body">
-								<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>5:00pm - 6:00pm</div>
+								<div class="card-text pb-1"><i class="fas fa-map-marker-alt fa-1x pr-3"></i>9801 Spalding Rd, Pender Island, BC V0N 2M3</div>
+								<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>July 20 2019, 5PM - 6PM</div>
 								<div class="card-text">While the bride, groom, family, and wedding party are taking photos all other guests can enjoy punch and appetizers in the Sea Glass Ballroom. This is located inside the hotel on the main level. It is right behind the Sea Glass Terrace where the reception will be held.</div>
 							  </div>
 							</div>
@@ -126,10 +131,11 @@
 								  <i class="fas fa-chevron-down fa-1x"></i> 
 								</button>
 							  </div>
-							</div>
+							</div>	
 							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
 							  <div class="card-body">
-									<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>6:00pm - 12:00am</div>
+									<div class="card-text pb-1"><i class="fas fa-map-marker-alt fa-1x pr-3"></i>9801 Spalding Rd, Pender Island, BC V0N 2M3</div>
+									<div class="card-text pb-3"><i class="far fa-clock fa-1x pr-3"></i>July 20 2019, 6PM - 12AM</div>
 									<div class="card-text">The reception will be held in the Sea Glass Ballroom as well. Look at the cocktail hour description for details on it's location. We will start with some appetizers and wine at the tables. Then the dinner BBQ will begin. You will have the choice of steak, chicken, or salmon.</p>
 							  </div>
 							</div>
@@ -143,7 +149,7 @@
 		
 		<!--Location Section-->
 		
-		<section class="pt-5 pb-5 light-section">
+		<!--<section class="pt-5 pb-5 light-section">
 			<div class="container map-section p-2">
 				<div class="row">
 					<div class="col">
@@ -151,7 +157,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		
 		
 
@@ -168,16 +174,17 @@
 				<div class="row">
 				
 						<div class="col-sm-12 col-md-6 col-lg-4 pb-5">
-							<div class="card">
+							<div class="card h-100">
 								<img class="card-img" src="res/poets.jpg"/>
 								<div class="card-body">
 									<div class="card-title">POETS COVE</div>
 									<div class="card-text">A resort and spa with villas, cabins, and hotel rooms.</div>
 								</div>
-								<div class="card-footer">
-									<a target="_blank" href="https://www.poetscove.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>poetscove.com</a><br>
+								<div class="card-footer p-3">
+									<a class="btn btn-md" href="https://www.poetscove.com" target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="https://www.poetscove.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>poetscove.com</a><br>
 									<a href="tel:1-250-629-2100" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-250-629-2100</a><br>
-									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>info@poetscove.com</a>
+									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>info@poetscove.com</a>-->
 								
 								</div>
 								
@@ -185,49 +192,52 @@
 						</div>
 						
 						<div class="col-sm-12 col-md-6 col-lg-4 pb-5">
-							<div class="card">
+							<div class="card h-100">
 								<img class="card-img" src="res/woods.jpg"/>
 								<div class="card-body">
 									<div class="card-title">WOODS</div>
 									<div class="card-text">A "glamping" resort with shaftas, airstreams, cabins, and hotel rooms.</div>
 								</div>
 								<div class="card-footer">
-									<a target="_blank" href="https://www.woodsonpender.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>woodsonpender.com</a><br>
+									<a class="btn btn-md" href="https://www.woodsonpender.com" target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="https://www.woodsonpender.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>woodsonpender.com</a><br>
 									<a href="tel:1-250-629-3353" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-250-629-3353</a><br>
 									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>info@woodsonpender.com</a>
-								
+									-->
 								</div>
 							
 							</div>
 						</div>
 							
 						<div class="col-sm-12 col-md-6 col-lg-4 pb-5">
-							<div class="card">
+							<div class="card h-100">
 								<img class="card-img" src="res/currents.JPG"/>
 								<div class="card-body">
 									<div class="card-title">CURRENTS</div>
 									<div class="card-text">A resort with cabins. Give them a call to book.</div>
 								</div>
 								<div class="card-footer">
-									<a target="_blank" href="http://www.currentsliving.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>currentsliving.com</a><br>
+									<a class="btn btn-md" href="http://www.currentsliving.com"  target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="http://www.currentsliving.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>currentsliving.com</a><br>
 									<a href="tel:1-855-732-6668" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-855-732-6668</a><br>
-									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>seamont2@telus.net</a>
+									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>seamont2@telus.net</a>-->
 								</div>
 							
 							</div>
 						</div>
 							
 						<div class="col-sm-12 col-md-6 col-lg-4 pb-5">
-							<div class="card">
+							<div class="card h-100">
 								<img class="card-img" src="res/arcadia.jpg"/>
 								<div class="card-body">
 									<div class="card-title">ARCADIA BY THE SEA</div>
 									<div class="card-text">A resort with three cabins.</div>
 								</div>
 								<div class="card-footer">
-									<a target="_blank" href="https://arcadiabythesea.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>arcadiabythesea.com</a><br>
+									<a class="btn btn-md" href="https://arcadiabythesea.com" target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="https://arcadiabythesea.com" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>arcadiabythesea.com</a><br>
 									<a href="tel:1-250-589-0993" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-250-589-0993</a><br>
-									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>matt@arcadiabythesea.com</a>
+									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>matt@arcadiabythesea.com</a>-->
 								
 								</div>
 							
@@ -235,16 +245,17 @@
 						</div>
 						
 						<div class="col-sm-12 col-md-6 col-lg-4 pb-5">
-							<div class="card">
+							<div class="card h-100">
 								<img class="card-img" src="res/salmonberry.jpg"/>
 								<div class="card-body">
 									<div class="card-title">SALMONBERRY INN</div>
 									<div class="card-text">A B&B with three guest suites.</div>
 								</div>
 								<div class="card-footer">
-									<a target="_blank" href="http://salmonberryinn.ca" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>salmonberryinn.ca</a><br>
+									<a class="btn btn-md" href="http://salmonberryinn.ca"target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="http://salmonberryinn.ca" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>salmonberryinn.ca</a><br>
 									<a href="tel:1-250-629-6774" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-250-629-6774</a><br>
-									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>mamie@salmonberryinn.ca</a>
+									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>mamie@salmonberryinn.ca</a>-->
 								
 								</div>
 							
@@ -259,9 +270,10 @@
 									<div class="card-text">A marina and campsite.</div>
 								</div>
 								<div class="card-footer">
-									<a target="_blank" href="https://www.portbrowning.ca" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>portbrowning.ca</a><br>
+									<a class="btn btn-md" href="https://www.portbrowning.ca" target="_blank">MORE<i class=" pl-1 fas fa-chevron-right fa-1x"></i></a>
+									<!--<a target="_blank" href="https://www.portbrowning.ca" class="card-link"><i class="fas fa-globe fa-1x pr-2"></i>portbrowning.ca</a><br>
 									<a href="tel:1-250-629-3493" class="card-link"><i class="fas fa-phone fa-1x pr-2"></i>1-250-629-3493</a><br>
-									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>contact@portbrowning.ca</a>
+									<a href="#" class="card-link"><i class="fas fa-envelope fa-1x pr-2"></i>contact@portbrowning.ca</a>-->
 								
 								</div>
 							
