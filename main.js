@@ -1,6 +1,20 @@
 $(document).ready(function(){ 
 
-
+	var index = 0;
+	var images =["res/index.jpg", "res/details.jpg", "res/RSVP.jpg"];
+		
+	slideshow();
+	
+	function slideshow(){
+		
+		index= (index + 1)% 3;
+		
+		$('.header-img').css('background-image', 'url("'+ images[index] + '")')
+		 .fadeIn("slow" , function(){
+			setTimeout(slideshow,4000);
+		});
+	}
+	
 });
 
 
@@ -27,3 +41,4 @@ function scroll_up(){
 	}, 1000);
 
 }
+

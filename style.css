@@ -1,12 +1,6 @@
 @font-face{
-	
 	font-family: dancing_in_the_beat;
 	src: url('mainFont.ttf');
-}
-
-#map{
-	/*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-	/*filter: grayscale(100%);*/
 }
 
 html, body{
@@ -31,12 +25,10 @@ html, body{
 	height: 100%;
 }
 
-
 /*Cards*/
 
 .card{
 	border: none;
-	padding: 2px;
 }
 .card-img{
 	border-radius: 0;
@@ -48,18 +40,7 @@ html, body{
 .card-header{
 	background: none;
 }
-.card-link{
-	color: black;
-}
-.card-link:hover{
-	color: grey;
-	text-decoration: none;
-}
 
-.card-title{
-	letter-spacing: 2px;
-	color: #6c757d;
-}
 
 
 /*Sections*/
@@ -83,8 +64,12 @@ html, body{
 	height: 100%;
 	color: white;
 }
-.map-section{
-	border: 2px solid #e1e1ea; 
+
+.section-padding{
+	padding-top: 120px;
+	padding-bottom: 120px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 /*Text*/
@@ -96,25 +81,15 @@ html, body{
 	text-align: center;
 	font-family: dancing_in_the_beat;
 }
-
-.header-date{
-	font-size: 20px;
-	letter-spacing: 5px;
-	color: white;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
-}
 .p-title{
 	letter-spacing: 6px;
 	font-weight: 300;
 	font-size: 20px;
-	text-align: center;
+	text-align: left;
 	color: black;
 }
 
-.header-sub-title{
+.section-title{
 	font-family: dancing_in_the_beat;
 	font-size: 70px;
 	color: #e1e1ea; 
@@ -124,7 +99,7 @@ html, body{
 p{
 	font-weight: 200;
 	font-size: 20px;
-	text-align: center;
+	text-align: left;
 	color: #6c757d;
 }
 
@@ -132,11 +107,16 @@ p{
 /*Navigation*/
 
 .navbar{
-	border-bottom: 1px solid grey;
+	border-bottom: 2px solid #f8f9fa;
 }
 
 .nav-link{
 	letter-spacing: 6px;
+	border-bottom: 3px solid white;
+}
+
+.nav-link:hover{
+	border-bottom-color: #e1e1ea; 
 }
 
 .navbar-brand{
@@ -196,11 +176,8 @@ p{
 	.header-title{
 		font-size: 55px;
 	}
-	.header-sub-title{
-		font-size: 50px;
-	}
-	.header-date{
-		font-size: 9px;
+	.section-title{
+		font-size: 60px;
 	}
 	.navbar-brand{
 		font-size: 15px;
@@ -218,18 +195,15 @@ p{
 		text-align: center;
 		border-bottom: 1px solid grey;
 	}
+	.nav-link:hover{
+		border-bottom-color: white; 
+	}
 }
 
 
 @media (min-width: 576px) and (max-width: 767.98px) {
 	.header-title{
 		font-size: 80px;
-	}
-	.header-sub-title{
-		font-size: 50px;
-	}
-	.header-date{
-		font-size: 15px;
 	}
 	.navbar-brand{
 		font-size: 18px;
@@ -241,10 +215,13 @@ p{
 		font-size: 18px;
 	}
 	p{
-		font-size: 18px;
+		font-size: 15px;
 	}
 	.nav-item{
 		text-align: center;
 		border-bottom: 1px solid grey;
+	}
+	.nav-link:hover{
+		border-bottom-color: white; 
 	}
 }
