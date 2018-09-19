@@ -82,6 +82,7 @@ html, body{
 
 .link{
 	color: #77728c;
+	font-weight: 500;
 }
 
 .link:hover{
@@ -120,9 +121,10 @@ button:focus{
 	width: 50px;
 	height: 50px;
 	bottom: 20px;
-	right: 10px;
+	right: 5px;
 	padding: 8px;
 	z-index: 1000;
+	display: none;
 }
 .up:hover{
 	background-color: #E8B0B3;
