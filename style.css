@@ -92,7 +92,7 @@ html, body{
 
 /*Buttons*/
 
-.btn-fill{
+.btn{
 	border: none;
 	color: white;
 	background-color: #77728c;
@@ -102,9 +102,10 @@ html, body{
 	font-weight: 400;
 }
 
-.btn-fill:hover{
+.btn:hover{
 	background-color: #E8B0B3;
 	cursor: pointer;
+	color: white;
 }
 
 button:focus{

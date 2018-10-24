@@ -52,35 +52,32 @@
 				<div class="col-sm-12 col-md-6 p-5">
 					<div class="section-title">RSVP</div>
 					<form>
-						<div class="form-row">
-							<div class="form-group col-md-6 col-sm-12">
+						<div class="form-row rsvp-form">
+							<div class="form-group col-4">
 								<label for="first-name" class="text-secondary">First Name</label>
-								<input type="text" class="form-control" id="input-first-name">
+								<input type="text" class="form-control input-first-name">
 							</div>
-							<div class="form-group col-md-6 col-sm-12">
+							<div class="form-group col-4">
 								<label for="last-name" class="text-secondary">Last Name</label>
-								<input type="text" class="form-control" id="input-last-name">
+								<input type="text" class="form-control input-last-name">
 							</div>
-							<div class="form-group col-12">
-								<label for="e-mail" class="text-secondary">E-mail</label>
-								<input type="text" class="form-control" id="input-email">
+							<div class="form-group col-2">
+								<label for="rsvp-status" class="text-secondary">Attending</label>
+								<select id="rsvpStatus" class="form-control select-rsvp-status">
+									<option selected>Yes</option>
+									<option>No</option>
+								</select>
 							</div>
-							<div class="form-group col-12">
+						</div>
+						<div class="form-row">
+							<div class="col-12">
+								<a class="link" id="add-person" href="#">+ Add Person</a>
+							</div>
+							<!--<div class="form-group col-12">
 								<label for="dietary restrictions" class="text-secondary">Dietary Restrictions</label>
 								<textarea class="form-control" rows="3" id="inputDiet"></textarea>
-							</div>
-							<div class="form-group col-md-6 col-sm-12">
-								<label for="attendance" class="text-secondary">Will you be there? </label>
-								<div class="form-check form-check-inline pl-2">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="option1">
-									<label class="form-check-label" for="yes">Yes</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="option2">
-									<label class="form-check-label" for="no">No</label>
-								</div>
-							</div>
-							<div class="col-12">
+							</div>-->
+							<div class="col-12 pt-4">
 								<button id="submit" type="submit" class="btn btn-lg">SUBMIT</button>
 							</div>
 						</div>
@@ -94,6 +91,29 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 		<script src="main.js"></script>
 		<script src="rsvp.js"></script>
+		
+		<template id="rsvp-form-temp">
+			<div class="form-row rsvp-form">
+				<div class="form-group col-4">
+					<label for="first-name" class="text-secondary">First Name</label>
+					<input type="text" class="form-control input-first-name">
+				</div>
+				<div class="form-group col-4">
+					<label for="last-name" class="text-secondary">Last Name</label>
+					<input type="text" class="form-control input-last-name">
+				</div>
+				<div class="form-group col-2">
+					<label for="rsvp-status" class="text-secondary">Attending</label>
+					<select class="form-control select-rsvp-status">
+						<option selected>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+				<div class="col-1">
+					<a class="link remove-person" href="#"><i class="fas fa-times fa-1x"></i></a>
+				</div>
+			</div>
+		</template>
 	
 	</body>
   

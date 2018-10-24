@@ -1,18 +1,26 @@
-$('#submit').click(function(){
-	
-	$.ajax({
-		url: "https://api.apify.com/v2/acts/FHJgED6L56Jku6jnq/runs?token=6CRi6nsTcZQWRdZKCzrPqDp85",
-		type: "POST",
-		data: {
-				"first-name" : "Adam",
-				"last-name" : "Smith",
-				"status" : "Attending"
-		},
-		dataType: "json",
-		success : function(result){console.log("success");},
-		error : function(xhr, ajaxOptions, thrownError){console.log("failed to send");}
+$(document).ready(function(){
+
+	$('#add-person').click(function(){
+		var add_person_form = $('#rsvp-form-temp').html();
+		$(add_person_form).insertAfter('.rsvp-form:last');
+		
+		$('.remove-person').click(function(){
+			$(this).parents('.rsvp-form').remove();
+		});		
 	});
 	
 	
-	
+	$('#submit').click(function(){
+		var message = [];
+		var rsvps = $('.rsvp-form');
+		
+		for (var rsvp of rsvps){
+			message.push([
+				$(rsvp).find('.input-first-name').val(),
+				$(rsvp).find('.input-last-name').val(),
+				$(rsvp).find('.select-rsvp-status').val()
+			]);
+		}
+	});
+
 });
