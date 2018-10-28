@@ -21,6 +21,13 @@ $(document).ready(function(){
 				$(rsvp).find('.select-rsvp-status').val()
 			]);
 		}
+		
+		
 	});
 
 });
+
+
+function google_sheets(data){
+
+}
