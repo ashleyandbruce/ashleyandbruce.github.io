@@ -19,8 +19,11 @@ function get_guest(first_name, last_name){
 		`https://quiet-plains-44094.herokuapp.com/guests/${first_name}/${last_name}`,
 		function(data){
 			console.log(data);
+			if(data.length == 0){
+				on_error();
+			}
 		}
-	).fail(on_error);
+	);
 }
 
 function get_party(party_id){
