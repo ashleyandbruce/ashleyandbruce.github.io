@@ -5,7 +5,9 @@ $(document).ready(function(){
 		var first_name = $('.input-first-name').val();
 		var last_name = $('.input-last-name').val();
 		var guest = get_guest(first_name, last_name);
+		console.log(guest);
 		var party = get_party(guest.party_id);
+		console.log(party);
 	});
 
 });
