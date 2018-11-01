@@ -12,6 +12,10 @@ function on_error(){
 	$('#error').removeClass('invisible').addClass('visible');
 }
 
+function on_success(){
+	$('#error').removeClass('visible').addClass('invisible');
+}
+
 function get_guest(first_name, last_name){
 
 	$.get(
@@ -20,6 +24,9 @@ function get_guest(first_name, last_name){
 			console.log(data);
 			if(data.length == 0){
 				on_error();
+			}
+			else{
+				on_success();
 			}
 		}
 	);
