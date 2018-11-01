@@ -19,6 +19,7 @@ function get_guest(first_name, last_name){
 		`https://quiet-plains-44094.herokuapp.com/guests/${first_name}/${last_name}`,
 		function(data){
 			guest = data;
+			console.log(data);
 		}
 	);
 	return guest;
