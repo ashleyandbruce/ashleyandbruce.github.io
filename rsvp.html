@@ -44,69 +44,47 @@
 			</nav>
 		</header>
 		
-		<div class="container-fluid pt-5">
-			<div class="row">
-				<div class="col-sm-12 col-md-6 px-0">
-					<!---<img class="img-fluid" src="res/flowers.jpg"/>-->
+		
+		<section class="light-section section-padding" >
+			<div class="container">
+				<div class="row">
+					<div class="col section-title">RSVP</div>
 				</div>
-				<div class="col-sm-12 col-md-6 p-5">
-					<div class="section-title">RSVP</div>
-					<form>
-						<div class="form-row rsvp-form">
-							<div class="form-group col-4">
-								<label for="first-name" class="text-secondary">First Name</label>
-								<input type="text" class="form-control input-first-name">
-							</div>
-							<div class="form-group col-4">
-								<label for="last-name" class="text-secondary">Last Name</label>
-								<input type="text" class="form-control input-last-name">
-							</div>
-							<div class="form-group col-2">
-								<label for="rsvp-status" class="text-secondary">Attending</label>
-								<select id="rsvpStatus" class="form-control select-rsvp-status">
-									<option selected>Yes</option>
-									<option>No</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="col-12">
-								<a class="link" id="add-person" href="#">+ Add Person</a>
-							</div>
-							<div class="col-12 pt-4">
-								<button id="submit" type="submit" class="btn btn-lg">SUBMIT</button>
-							</div>
-						</div>
-					</form>
+				<div class="row">
+					<div class="col-8">
+						<div class="p-title">Enter your first and last name as written on your invitation. You will be asked to RSVP for everyone in your party.</div>
+					</div>
+				</div>
+				<div class="form-row pt-5">
+					<div class="form-group col-3">
+						<label for="first-name" class="text-secondary">First Name</label>
+						<input type="text" class="form-control input-first-name">
+					</div>
+					<div class="form-group col-3">
+						<label for="last-name" class="text-secondary">Last Name</label>
+						<input type="text" class="form-control input-last-name">
+					</div>
+					<div class="form-group col-2 pt-4">
+						<button id="submit" class="btn">SUBMIT</button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 								
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 		<script src="main.js"></script>
 		<script src="rsvp.js"></script>
-		
-		<template id="rsvp-form-temp">
+				
+		<template id="rsvp-guest-form2">
 			<div class="form-row rsvp-form">
-				<div class="form-group col-4">
-					<label for="first-name" class="text-secondary">First Name</label>
-					<input type="text" class="form-control input-first-name">
-				</div>
-				<div class="form-group col-4">
-					<label for="last-name" class="text-secondary">Last Name</label>
-					<input type="text" class="form-control input-last-name">
-				</div>
 				<div class="form-group col-2">
 					<label for="rsvp-status" class="text-secondary">Attending</label>
 					<select class="form-control select-rsvp-status">
 						<option selected>Yes</option>
 						<option>No</option>
 					</select>
-				</div>
-				<div class="col-1">
-					<a class="link remove-person" href="#"><i class="fas fa-times fa-1x"></i></a>
 				</div>
 			</div>
 		</template>
