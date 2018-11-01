@@ -9,6 +9,9 @@ $(document).ready(function(){
 
 });
 
+function on_error(){
+	$('#error').removeClass('invisible').addClass('visible');
+}
 
 function get_guest(first_name, last_name){
 
@@ -17,10 +20,7 @@ function get_guest(first_name, last_name){
 		function(data){
 			console.log(data);
 		}
-	).fail(function(){
-	
-	
-	});
+	).fail(on_error);
 }
 
 function get_party(party_id){
