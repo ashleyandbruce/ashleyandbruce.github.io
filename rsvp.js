@@ -45,7 +45,7 @@ function get_party(party_id){
 			console.log(guests);
 			for(guest of guests){
 				var temp = $('#rsvp-guest-form');
-				console.log(temp);
+				console.log(temp.html());
 				//var guest_form = temp.content.cloneNode(true);
 				//$(temp).find('guest-name').text(`${guest.first_name} ${guest.last_name}`.toUpperCase());
 				//$('#dynamic-form-wrapper').appendChild(temp);
