@@ -44,7 +44,7 @@ function get_party(party_id){
 		function(guests){
 			for(guest of guests){
 				var temp = $('#rsvp-guest-form').html();
-				$(temp).find('.guest-name').text(`${guest.first_name} ${guest.last_name}`);
+				$(temp).find('.guest-name').append(`${guest.first_name} ${guest.last_name}`);
 				$('#dynamic-form-wrapper').append(temp);
 			}
 
