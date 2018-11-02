@@ -42,10 +42,9 @@ function get_party(party_id){
 	$.get(
 		`https://quiet-plains-44094.herokuapp.com/guests/${party_id}`,
 		function(guests){
-			console.log(guests);
 			for(guest of guests){
 				var temp = $('#rsvp-guest-form').html();
-				$(temp).find('.guest-name').text(`${guest.first_name} ${guest.last_name}`.toUpperCase());
+				$(temp).find('.guest-name').text(`${guest.first_name} ${guest.last_name}`);
 				$('#dynamic-form-wrapper').append(temp);
 			}
 
