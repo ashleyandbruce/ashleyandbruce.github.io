@@ -1,3 +1,126 @@
+
+function MainVM(){
+	var client = new GuestClient();
+	this.firstName = ko.observable("");
+	this.lastName = ko.observable("");
+	this.party = ko.observableArray([]);
+	
+	this.submit = function(){
+		var guest = client.getGuest(this.firstName(), this.lastName());
+		console.log(guest);
+	};
+	
+}
+
+function GuestClient(){
+	var baseUrl = "https://quiet-plains-44094.herokuapp.com";
+	
+	this.getAll = function(){
+		var data = null;
+		
+		$.ajax({
+			url : `${baseUrl}/guests`,
+			method : 'GET',
+			error : function(xhr, status, error){
+				throw err;
+			},
+			success : function(result, status, xhr){
+				data = result;
+			}
+		});
+		
+		return data;
+	};
+	
+	this.getGuest = function(first_name, last_name){
+		var data = null;
+		
+		$.ajax({
+			url : `{baseUrl}/guests/${first_name}/${last_name}`,
+			method : 'GET',
+			error : function(xhr, status, error){
+				throw err;			
+			},
+			success : function(result, status, xhr){
+				data = result;
+			}
+		});
+		
+		return data;
+	};
+	
+	this.getParty = function(party_id){
+		
+		var data = null;
+		
+		$.ajax({
+			url : `{baseUrl}/guests/${party_id}`,
+			method : 'GET',
+			error : function(xhr, status, error){
+				throw err;			
+			},
+			success : function(result, status, xhr){
+				data = result;
+			}
+		});
+		
+		return data;
+	};
+	
+	this.addGuest = function(guest){
+		
+		$.ajax({
+			url : `${baseUrl}/guests`,
+			method : 'PUT',
+			error : function(xhr, status, error){
+				throw err;
+			}
+		});
+		
+		
+	};
+	
+	this.updateGuest = function(guest){
+		
+		$.ajax({
+			url : `${baseUrl}/guests/${guest.first_name}/${guest.last_name}`,
+			method : 'PATCH',
+			data : {
+				status: guest.status,
+				dietary_res : guest.dietary_res
+			},
+			error : function(xhr, status, error){
+				throw err;
+			}
+		});
+	
+	};
+	
+}
+
+$(document).ready(function(){
+	ko.applyBindings(new MainVM());
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $(document).ready(function(){
 	
 	$('#submit').click(function(){
@@ -51,4 +174,4 @@ function get_party(party_id){
 		}
 	);
 
-}
+}*/
