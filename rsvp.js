@@ -7,7 +7,9 @@ function MainVM(){
 	
 	this.submit = async function(){
 		var guest = await client.getGuest(this.firstName(), this.lastName());
-		console.log(guest);
+		var party = await client.getParty(guest.party_id);
+		
+		console.log(party);
 	};
 	
 }
@@ -15,17 +17,11 @@ function MainVM(){
 function GuestClient(){
 	var baseUrl = "https://quiet-plains-44094.herokuapp.com";
 	
-	this.getAll = function(){
-		var data = null;
-		$.ajax({
+	this.getAll = async function(){
+		
+		var data = await $.ajax({
 			url : baseUrl + "/guests",
-			method : 'GET',
-			error : function(xhr, status, error){
-				throw error;
-			},
-			success : function(result, status, xhr){
-				data = result;
-			}
+			method : 'GET'
 		});
 		
 		return data;
@@ -41,19 +37,11 @@ function GuestClient(){
 		return data;
 	};
 	
-	this.getParty = function(party_id){
+	this.getParty = async function(party_id){
 		
-		var data = null;
-		
-		$.ajax({
+		var data = await $.ajax({
 			url : baseUrl + "/guests/" + party_id,
-			method : 'GET',
-			error : function(xhr, status, error){
-				throw error;			
-			},
-			success : function(result, status, xhr){
-				data = result;
-			}
+			method : 'GET'
 		});
 		
 		return data;
