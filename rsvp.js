@@ -17,15 +17,15 @@ function GuestClient(){
 	
 	this.getAll = function(){
 		var data = null;
-		$.get(
+		/*$.get(
 			baseUrl + "/guests",
 			function(res){
 				data = res;
 			}
-		);
-		/*
+		);*/
+
 		$.ajax({
-			url : `${baseUrl}/guests`,
+			url : baseUrl + "/guests",
 			method : 'GET',
 			error : function(xhr, status, error){
 				throw error;
@@ -33,7 +33,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});*/
+		});
 		
 		return data;
 	};
