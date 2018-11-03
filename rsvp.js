@@ -17,7 +17,13 @@ function GuestClient(){
 	
 	this.getAll = function(){
 		var data = null;
-		
+		$.get(
+			`${baseUrl}/guests`,
+			function(res){
+				data = res;
+			}
+		);
+		/*
 		$.ajax({
 			url : `${baseUrl}/guests`,
 			method : 'GET',
@@ -27,7 +33,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});
+		});*/
 		
 		return data;
 	};
@@ -35,7 +41,13 @@ function GuestClient(){
 	this.getGuest = function(first_name, last_name){
 		var data = null;
 		
-		$.ajax({
+		$.get(
+			`{baseUrl}/guests/${first_name}/${last_name}`,
+			function(res){
+				data = res;
+			}
+		);
+		/*$.ajax({
 			url : `{baseUrl}/guests/${first_name}/${last_name}`,
 			method : 'GET',
 			error : function(xhr, status, error){
@@ -44,7 +56,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});
+		});*/
 		
 		return data;
 	};
@@ -53,7 +65,13 @@ function GuestClient(){
 		
 		var data = null;
 		
-		$.ajax({
+		$.get(
+			`{baseUrl}/guests/${party_id}`,
+			function(res){
+				data = res;
+			}
+		);
+		/*$.ajax({
 			url : `{baseUrl}/guests/${party_id}`,
 			method : 'GET',
 			error : function(xhr, status, error){
@@ -62,7 +80,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});
+		});*/
 		
 		return data;
 	};
