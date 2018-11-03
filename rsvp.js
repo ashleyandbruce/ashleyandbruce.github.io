@@ -7,7 +7,6 @@ function MainVM(){
 	
 	this.submit = function(){
 		var guest = client.getGuest(this.firstName(), this.lastName());
-		console.log(guest);
 	};
 	
 }
@@ -17,13 +16,6 @@ function GuestClient(){
 	
 	this.getAll = function(){
 		var data = null;
-		/*$.get(
-			baseUrl + "/guests",
-			function(res){
-				data = res;
-			}
-		);*/
-
 		$.ajax({
 			url : baseUrl + "/guests",
 			method : 'GET',
@@ -40,25 +32,12 @@ function GuestClient(){
 	
 	this.getGuest = function(first_name, last_name){
 		var data = null;
-		
-		/*$.get(
-			baseUrl + "/guests/" + first_name + "/" + last_name,
-			function(res){
-				data = res;
-			}
-		);*/
+	
 		$.ajax({
 			url : baseUrl + "/guests/" + first_name + "/" + last_name,
-			method : 'GET',
-			error : function(xhr, status, error){
-				console.log("error");
-				throw error;			
-			},
-			success : function(result, status, xhr){
-				console.log(result);
-				data = result;
-			}
-			
+			type : 'GET'
+		}).then(function(res){
+			data = res;
 		});
 		
 		return data;
@@ -68,14 +47,8 @@ function GuestClient(){
 		
 		var data = null;
 		
-		$.get(
-			baseUrl + "/guests/" + party_id,
-			function(res){
-				data = res;
-			}
-		);
-		/*$.ajax({
-			url : `{baseUrl}/guests/${party_id}`,
+		$.ajax({
+			url : baseUrl + "/guests/" + party_id,
 			method : 'GET',
 			error : function(xhr, status, error){
 				throw error;			
@@ -83,7 +56,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});*/
+		});
 		
 		return data;
 	};
