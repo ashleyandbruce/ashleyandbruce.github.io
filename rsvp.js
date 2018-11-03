@@ -7,6 +7,7 @@ function MainVM(){
 	
 	this.submit = function(){
 		var guest = client.getGuest(this.firstName(), this.lastName());
+		console.log(guest);
 	};
 	
 }
