@@ -41,14 +41,14 @@ function GuestClient(){
 	this.getGuest = function(first_name, last_name){
 		var data = null;
 		
-		$.get(
+		/*$.get(
 			baseUrl + "/guests/" + first_name + "/" + last_name,
 			function(res){
 				data = res;
 			}
-		);
-		/*$.ajax({
-			url : `{baseUrl}/guests/${first_name}/${last_name}`,
+		);*/
+		$.ajax({
+			url : baseUrl + "/guests/" + first_name + "/" + last_name,
 			method : 'GET',
 			error : function(xhr, status, error){
 				throw error;			
@@ -56,7 +56,7 @@ function GuestClient(){
 			success : function(result, status, xhr){
 				data = result;
 			}
-		});*/
+		});
 		
 		return data;
 	};
