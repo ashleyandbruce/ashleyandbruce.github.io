@@ -22,7 +22,7 @@ function GuestClient(){
 			url : `${baseUrl}/guests`,
 			method : 'GET',
 			error : function(xhr, status, error){
-				throw err;
+				throw error;
 			},
 			success : function(result, status, xhr){
 				data = result;
@@ -39,7 +39,7 @@ function GuestClient(){
 			url : `{baseUrl}/guests/${first_name}/${last_name}`,
 			method : 'GET',
 			error : function(xhr, status, error){
-				throw err;			
+				throw error;			
 			},
 			success : function(result, status, xhr){
 				data = result;
@@ -57,7 +57,7 @@ function GuestClient(){
 			url : `{baseUrl}/guests/${party_id}`,
 			method : 'GET',
 			error : function(xhr, status, error){
-				throw err;			
+				throw error;			
 			},
 			success : function(result, status, xhr){
 				data = result;
@@ -73,7 +73,7 @@ function GuestClient(){
 			url : `${baseUrl}/guests`,
 			method : 'PUT',
 			error : function(xhr, status, error){
-				throw err;
+				throw error;
 			}
 		});
 		
@@ -90,7 +90,7 @@ function GuestClient(){
 				dietary_res : guest.dietary_res
 			},
 			error : function(xhr, status, error){
-				throw err;
+				throw error;
 			}
 		});
 	
