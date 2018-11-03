@@ -51,11 +51,14 @@ function GuestClient(){
 			url : baseUrl + "/guests/" + first_name + "/" + last_name,
 			method : 'GET',
 			error : function(xhr, status, error){
+				console.log("error");
 				throw error;			
 			},
 			success : function(result, status, xhr){
+				console.log(result);
 				data = result;
 			}
+			
 		});
 		
 		return data;
