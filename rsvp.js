@@ -31,14 +31,11 @@ function GuestClient(){
 		return data;
 	};
 	
-	this.getGuest = function(first_name, last_name){
-		var data = null;
-	
-		$.ajax({
+	this.getGuest = async function(first_name, last_name){
+		
+		var data = await $.ajax({
 			url : baseUrl + "/guests/" + first_name + "/" + last_name,
 			type : 'GET'
-		}).done(function(res){
-			data = res;
 		});
 		
 		return data;
