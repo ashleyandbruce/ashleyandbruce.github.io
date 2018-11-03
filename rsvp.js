@@ -37,7 +37,7 @@ function GuestClient(){
 		$.ajax({
 			url : baseUrl + "/guests/" + first_name + "/" + last_name,
 			type : 'GET'
-		}).then(function(res){
+		}).done(function(res){
 			data = res;
 		});
 		
