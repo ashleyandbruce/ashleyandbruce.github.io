@@ -18,7 +18,7 @@ function GuestClient(){
 	this.getAll = function(){
 		var data = null;
 		$.get(
-			`${baseUrl}/guests`,
+			baseUrl + "/guests",
 			function(res){
 				data = res;
 			}
@@ -42,7 +42,7 @@ function GuestClient(){
 		var data = null;
 		
 		$.get(
-			`{baseUrl}/guests/${first_name}/${last_name}`,
+			baseUrl + "/guests/" + first_name + "/" + last_name,
 			function(res){
 				data = res;
 			}
@@ -66,7 +66,7 @@ function GuestClient(){
 		var data = null;
 		
 		$.get(
-			`{baseUrl}/guests/${party_id}`,
+			baseUrl + "/guests/" + party_id,
 			function(res){
 				data = res;
 			}
@@ -88,7 +88,7 @@ function GuestClient(){
 	this.addGuest = function(guest){
 		
 		$.ajax({
-			url : `${baseUrl}/guests`,
+			url : baseUrl + "/guests",
 			method : 'PUT',
 			error : function(xhr, status, error){
 				throw error;
@@ -101,7 +101,7 @@ function GuestClient(){
 	this.updateGuest = function(guest){
 		
 		$.ajax({
-			url : `${baseUrl}/guests/${guest.first_name}/${guest.last_name}`,
+			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
 			method : 'PATCH',
 			data : {
 				status: guest.status,
