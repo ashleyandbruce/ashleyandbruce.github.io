@@ -6,7 +6,7 @@ function MainVM(){
 	this.party = ko.observableArray([]);
 	
 	this.submit = function(){
-		var guest = client.getGuest(this.firstName(), this.lastName());
+		var guest = await client.getGuest(this.firstName(), this.lastName());
 		console.log(guest);
 	};
 	
