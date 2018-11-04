@@ -3,10 +3,7 @@ function MainVM(){
 	var client = new GuestClient();
 	this.firstName = ko.observable("");
 	this.lastName = ko.observable("");
-	this.party = ko.observableArray([
-		{first_name : "Ashley", last_name : "Currie"},
-		{first_name : "Bruce", last_name : "Laird"}
-	]);
+	this.party = ko.observableArray([]);
 	
 	this.submit = async function(){
 		var guest = await client.getGuest(this.firstName(), this.lastName());
