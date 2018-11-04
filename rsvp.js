@@ -5,7 +5,17 @@ function MainVM(){
 	this.lastName = ko.observable("");
 	this.invalidNames = ko.observable(false);
 	
-	this.party = ko.observableArray([]);
+	this.party = ko.observableArray([
+	/*{
+		first_name : '',
+		last_name : ''
+	},
+	
+	{
+		first_name : '',
+		last_name : ''
+	}*/
+	]);
 	
 	this.submit = async function(){
 		
