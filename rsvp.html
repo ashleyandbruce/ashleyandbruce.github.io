@@ -50,7 +50,7 @@
 				<div class="row">
 					<div class="col section-title">RSVP</div>
 				</div>
-				<div class="row">
+				<div data-bind="visible : party().length == 0" class="row">
 					<div class="col-8 pb-5">
 						<div class="p-title">Enter the name of one member of your party as addressed on your invitation.</div>
 					</div>
