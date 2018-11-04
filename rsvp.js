@@ -3,21 +3,29 @@ function MainVM(){
 	var client = new GuestClient();
 	this.firstName = ko.observable("");
 	this.lastName = ko.observable("");
+	this.invalidNames = ko.observable(false);
+	
 	this.party = ko.observableArray([]);
 	
 	this.submit = async function(){
-		var guest = await client.getGuest(this.firstName(), this.lastName());
-		var party = await client.getParty(guest.party_id);
 		
-		for(guest of party){
-			this.party.push(guest);
+		var guest = await client.getGuest(this.firstName(), this.lastName());
+		if(guest == undefined){
+			this.invalidNames(true);
 		}
-
+		else{
+			var party = await client.getParty(guest.party_id);
+		
+			for(guest of party){
+				this.party.push(guest);
+			}
+		}
 	};
 	
 }
 
 function GuestClient(){
+	
 	var baseUrl = "https://quiet-plains-44094.herokuapp.com";
 	
 	this.getAll = async function(){
