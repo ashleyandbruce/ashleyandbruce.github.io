@@ -7,12 +7,12 @@ function MainVM(){
 	
 	this.submit = async function(){
 		var guest = await client.getGuest(this.firstName(), this.lastName());
-		
-		console.log(guest);
-		
 		var party = await client.getParty(guest.party_id);
 		
-		console.log(party);
+		for(guest of party){
+			this.party.push(guest);
+		}
+
 	};
 	
 }
