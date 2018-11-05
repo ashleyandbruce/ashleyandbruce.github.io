@@ -80,21 +80,21 @@
 				</div>
 				<div data-bind="foreach: guests">
 					<div class="row pb-5">
-						<div data-bind="text: first_name + ' ' + last_name" class="col-12 p-title pb-5"></div>
+						<div data-bind="text: (first_name + ' ' + last_name).toUpperCase()" class="col-12 p-title pb-5"></div>
 						
-						<div class="col-md-2 col-sm-12">
-							<label class="radio-container">ACCEPTS
+						<div class="col-md-3 col-sm-12 pb-5">
+							<label class="radio-container">ACCEPTS WITH PLEASURE
 								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="2">
 								<span class="radio-style"></span>
 							</label>
-							<label class="radio-container">DECLINES
+							<label class="radio-container">DECLINES WITH REGRET
 								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="3">
 								<span class="radio-style"></span>
 							</label>
 						</div>
 						
 						<div class="col-md-6 col-sm-12">
-							<textarea data-bind="textInput: dietary_res" class="form-control" rows="3" placeholder="List any dietary restrictions"></textarea>
+							<textarea data-bind="textInput: dietary_res" class="form-control" rows="3" placeholder="Dietary restrictions"></textarea>
 						</div>
 					</div>
 				</div>

@@ -153,8 +153,8 @@ button:focus{
   position: absolute;
   top: 0;
   left: 0;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   background-color: #e6e6e6;
   border-radius: 15px;
 }

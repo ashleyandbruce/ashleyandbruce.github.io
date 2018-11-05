@@ -7,15 +7,19 @@ function RsvpVM(){
 	this.invalidNames = ko.observable(false);
 	
 	this.guests = ko.observableArray([
-	/*{
+	{
 		first_name : 'Ashley',
-		last_name : 'Currie'
+		last_name : 'Currie',
+		status: 1,
+		dietary_res : null
 	},
 	
 	{
 		first_name : 'Bruce',
-		last_name : 'Laird'
-	}*/
+		last_name : 'Laird',
+		status: 1,
+		dietary_res: null
+	}
 	]);
 	
 	this.nameEmpty = ko.computed(function(){
@@ -32,16 +36,11 @@ function RsvpVM(){
 	
 	this.findGuests = async function(){
 		
-		var guest = await client.getGuest(this.firstName(), this.lastName());
-		if(guest == undefined){
-			this.invalidNames(true);
+		try{
+			this.guests = await client.getPartyByGuest(this.firstName(), this.lastName());
 		}
-		else{
-			var party = await client.getParty(guest.party_id);
-		
-			for(guest of party){
-				this.guests.push(guest);
-			}
+		catch(err){
+			this.invalidNames(true);
 		}
 	};
 	
@@ -89,11 +88,28 @@ function GuestClient(){
 		return data;
 	};
 	
+	this.getPartyByGuest = async function(first_name, last_name){
+		
+		var data;
+		try{
+			var guest = await this.getGuest(first_name, last_name);
+			data = await this.getParty(guest.party_id);
+		}
+		catch(err){
+			throw err;
+		}
+		
+		return data;
+	}
+	
 	this.addGuest = function(guest){
 		
 		$.ajax({
 			url : baseUrl + "/guests",
-			method : 'PUT'
+			method : 'POST',
+			headers:{
+				"Content-Type" : "application/json"
+			}
 		});
 		
 		
@@ -104,6 +120,9 @@ function GuestClient(){
 		$.ajax({
 			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
 			method : 'PATCH',
+			headers:{
+				"Content-Type" : "application/json"
+			},
 			data : {
 				status: guest.status,
 				dietary_res : guest.dietary_res
