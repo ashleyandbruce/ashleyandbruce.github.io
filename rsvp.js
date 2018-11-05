@@ -37,7 +37,11 @@ function RsvpVM(){
 	this.findGuests = async function(){
 		
 		try{
-			this.guests = await client.getPartyByGuest(this.firstName(), this.lastName());
+			var guests = await client.getPartyByGuest(this.firstName(), this.lastName());
+			
+			for(guest of guests){
+				this.guests.push(guest);
+			}
 		}
 		catch(err){
 			this.invalidNames(true);
