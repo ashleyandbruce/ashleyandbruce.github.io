@@ -7,7 +7,7 @@ function RsvpVM(){
 	this.invalidNames = ko.observable(false);
 	
 	this.guests = ko.observableArray([
-	{
+	/*{
 		first_name : 'Ashley',
 		last_name : 'Currie',
 		status: 1,
@@ -19,7 +19,7 @@ function RsvpVM(){
 		last_name : 'Laird',
 		status: 1,
 		dietary_res: null
-	}
+	}*/
 	]);
 	
 	this.nameEmpty = ko.computed(function(){
