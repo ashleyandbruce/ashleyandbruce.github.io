@@ -76,7 +76,7 @@ function GuestClient(){
 			type : 'GET'
 		});
 		
-		return data[0];
+		return data;
 	};
 	
 	this.getParty = async function(party_id){
