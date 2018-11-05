@@ -134,6 +134,40 @@ button:focus{
 	background-color: #E8B0B3;
 }
 
+.radio-container{
+	display: block;
+	position: relative;	
+	padding-left: 40px;
+	margin-bottom: 20px;
+}
+
+.radio-container input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.radio-style{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #e6e6e6;
+  border-radius: 15px;
+}
+
+.radio-container input:hover ~ .radio-style {
+  background-color: #cccccc;
+}
+
+.radio-container input:checked ~ .radio-style {
+  background-color: #77728c;
+}
+
+
 /*Sections*/
 
 .full-screen{

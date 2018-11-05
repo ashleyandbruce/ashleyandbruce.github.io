@@ -1,23 +1,36 @@
 
-function MainVM(){
+function RsvpVM(){
+	
 	var client = new GuestClient();
 	this.firstName = ko.observable("");
 	this.lastName = ko.observable("");
 	this.invalidNames = ko.observable(false);
 	
-	this.party = ko.observableArray([
+	this.guests = ko.observableArray([
 	/*{
-		first_name : '',
-		last_name : ''
+		first_name : 'Ashley',
+		last_name : 'Currie'
 	},
 	
 	{
-		first_name : '',
-		last_name : ''
+		first_name : 'Bruce',
+		last_name : 'Laird'
 	}*/
 	]);
 	
-	this.submit = async function(){
+	this.nameEmpty = ko.computed(function(){
+		
+		return this.firstName() == '' || this.lastName() == '';
+		
+	}, this);
+	
+	this.guestsLoaded = ko.computed(function(){
+		
+		 return this.guests().length > 0;
+		 
+	},this);
+	
+	this.findGuests = async function(){
 		
 		var guest = await client.getGuest(this.firstName(), this.lastName());
 		if(guest == undefined){
@@ -27,9 +40,17 @@ function MainVM(){
 			var party = await client.getParty(guest.party_id);
 		
 			for(guest of party){
-				this.party.push(guest);
+				this.guests.push(guest);
 			}
 		}
+	};
+	
+	this.updateGuests = async function(){
+		console.log(this.guests());
+		/*for(guest of party){
+			await client.updateGuest(guest);
+		}*/
+		
 	};
 	
 }
@@ -72,10 +93,7 @@ function GuestClient(){
 		
 		$.ajax({
 			url : baseUrl + "/guests",
-			method : 'PUT',
-			error : function(xhr, status, error){
-				throw error;
-			}
+			method : 'PUT'
 		});
 		
 		
@@ -89,9 +107,6 @@ function GuestClient(){
 			data : {
 				status: guest.status,
 				dietary_res : guest.dietary_res
-			},
-			error : function(xhr, status, error){
-				throw error;
 			}
 		});
 	
@@ -100,5 +115,5 @@ function GuestClient(){
 }
 
 $(document).ready(function(){
-	ko.applyBindings(new MainVM());
+	ko.applyBindings(new RsvpVM());
 });

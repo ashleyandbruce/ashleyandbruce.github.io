@@ -45,7 +45,7 @@
 		</header>
 		
 		
-		<section data-bind="css : {collapse : party().length > 0}" class="light-section section-padding" >
+		<section data-bind="css : {collapse : guestsLoaded }" class="light-section section-padding" >
 			<div class="container">
 				<div class="row">
 					<div class="col section-title">RSVP</div>
@@ -55,7 +55,7 @@
 						<div class="p-title">Enter the name of one member of your party as addressed on your invitation.</div>
 					</div>
 				</div>
-				<div class="row align-items-center">
+				<div class="row align-items-center pb-5">
 					<div class="col-md-3 col-sm-12">
 						<input data-bind="textInput: firstName" type="text" class="form-control" placeholder="First Name">
 					</div>
@@ -64,7 +64,7 @@
 						<input data-bind="textInput: lastName" type="text" class="form-control" placeholder="Last Name">
 					</div>
 					<div class="col-md-2">
-						<button data-bind="click: submit, disable:firstName() == '' || lastName() == ''" class="btn"><i class="fas fa-angle-right"></i></button>
+						<button data-bind="click: findGuests, disable: nameEmpty" class="btn"><i class="fas fa-angle-right"></i></button>
 					</div>
 				</div>
 				<div data-bind="visible: invalidNames" class="row">
@@ -73,25 +73,34 @@
 			</div>
 		</section>
 		
-		<section data-bind="css : {collapse : party().length <= 0}" class="light-section section-padding">
+		<section data-bind="css : {collapse : !guestsLoaded() }" class="light-section section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col section-title">GUESTS</div>
 				</div>
-				<div data-bind="foreach: party">
+				<div data-bind="foreach: guests">
 					<div class="row pb-5">
 						<div data-bind="text: first_name + ' ' + last_name" class="col-12 p-title pb-5"></div>
-						<div class="col-3">
-							<label class="text-secondary">Dietary Restrictions</label>
-							<textarea class="form-control" rows="2"></textarea>
+						
+						<div class="col-md-2 col-sm-12">
+							<label class="radio-container">ACCEPTS
+								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="2">
+								<span class="radio-style"></span>
+							</label>
+							<label class="radio-container">DECLINES
+								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="3">
+								<span class="radio-style"></span>
+							</label>
 						</div>
-						<div class="col-3">
-							<label class="text-secondary">Attending</label>
-							<select class="form-control">
-								<option value="1">Yes</option>
-								<option value="2">No</option>
-							</select>
+						
+						<div class="col-md-6 col-sm-12">
+							<textarea data-bind="textInput: dietary_res" class="form-control" rows="3" placeholder="List any dietary restrictions"></textarea>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<button data-bind="click: updateGuests" class="btn">SEND</button>
 					</div>
 				</div>
 			</div>
