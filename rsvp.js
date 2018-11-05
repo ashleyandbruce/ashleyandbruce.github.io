@@ -49,10 +49,10 @@ function RsvpVM(){
 	};
 	
 	this.updateGuests = async function(){
-		console.log(this.guests());
-		/*for(guest of party){
+
+		for(guest of guests){
 			await client.updateGuest(guest);
-		}*/
+		}
 		
 	};
 	
