@@ -125,10 +125,7 @@ function GuestClient(){
 			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
 			method : 'PUT',
 			dataType: 'json',
-			data : {
-				"status": parseInt(guest.status),
-				"dietary_res" : guest.dietary_res
-			}
+			data : guest
 		});
 	
 	};
