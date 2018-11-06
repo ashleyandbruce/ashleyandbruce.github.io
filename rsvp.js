@@ -126,7 +126,7 @@ function GuestClient(){
 			method : 'PUT',
 			dataType: 'json',
 			data : {
-				status: guest.status,
+				status: parseInt(guest.status),
 				dietary_res : guest.dietary_res
 			}
 		});
