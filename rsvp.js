@@ -51,7 +51,8 @@ function RsvpVM(){
 	this.updateGuests = async function(){
 
 		for(guest of this.guests()){
-			await client.updateGuest(guest);
+			console.log(guest);
+			client.updateGuest(guest);
 		}
 		
 	};
