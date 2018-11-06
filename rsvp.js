@@ -14,11 +14,9 @@ function RsvpVM(){
 		
 	}, this);
 	
-	this.guestsLoaded = ko.computed(function(){
-		
-		 return this.guests().length > 0;
-		 
-	},this);
+	this.nextStep = function(){
+		this.rsvpStep(this.rsvpStep() + 1);
+	}
 	
 	this.findGuests = async function(){
 		
@@ -28,7 +26,7 @@ function RsvpVM(){
 			for(guest of guests){
 				this.guests.push(guest);
 			}
-			this.rsvpStep()++;
+			this.nextStep();
 		}
 		catch(err){
 			this.invalidNames(true);
@@ -38,7 +36,7 @@ function RsvpVM(){
 	
 	this.updateGuests = function(){
 		client.updateGuests(this.guests());
-		this.rsvpStep()++;
+		this.nextStep();
 	};
 	
 }
