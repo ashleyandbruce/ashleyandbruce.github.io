@@ -123,7 +123,7 @@ function GuestClient(){
 		$.ajax({
 			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
 			method : 'PUT',
-			dataType: 'json'
+			dataType: 'json',
 			data : {
 				status: guest.status,
 				dietary_res : guest.dietary_res
