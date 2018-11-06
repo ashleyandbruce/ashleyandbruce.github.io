@@ -5,22 +5,8 @@ function RsvpVM(){
 	this.firstName = ko.observable("");
 	this.lastName = ko.observable("");
 	this.invalidNames = ko.observable(false);
-	
-	this.guests = ko.observableArray([
-	/*{
-		first_name : 'Ashley',
-		last_name : 'Currie',
-		status: 1,
-		dietary_res : null
-	},
-	
-	{
-		first_name : 'Bruce',
-		last_name : 'Laird',
-		status: 1,
-		dietary_res: null
-	}*/
-	]);
+	this.guests = ko.observableArray([]);
+	this.rsvpStep = ko.observable(1);
 	
 	this.nameEmpty = ko.computed(function(){
 		
@@ -42,19 +28,17 @@ function RsvpVM(){
 			for(guest of guests){
 				this.guests.push(guest);
 			}
+			this.rsvpStep()++;
 		}
 		catch(err){
 			this.invalidNames(true);
 		}
+
 	};
 	
 	this.updateGuests = function(){
-
-		for(guest of this.guests()){
-		
-			client.updateGuest(guest);
-		}
-		
+		client.updateGuests(this.guests());
+		this.rsvpStep()++;
 	};
 	
 }
@@ -128,6 +112,14 @@ function GuestClient(){
 			data : JSON.stringify(guest)
 		});
 	
+	};
+	
+	this.updateGuests = function(guests){
+		
+		for(guest of guests){
+			this.updateGuest(guest);
+		}
+		
 	};
 	
 }

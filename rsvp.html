@@ -45,7 +45,7 @@
 		</header>
 		
 		
-		<section data-bind="css : {collapse : guestsLoaded }" class="light-section section-padding" >
+		<section data-bind="css : {collapse : rsvpStep() != 1 }" class="light-section section-padding" >
 			<div class="container">
 				<div class="row">
 					<div class="col section-title">RSVP</div>
@@ -73,7 +73,7 @@
 			</div>
 		</section>
 		
-		<section data-bind="css : {collapse : !guestsLoaded() }" class="light-section section-padding">
+		<section data-bind="css : {collapse : rsvpStep() != 2}" class="light-section section-padding">
 			<div class="container">
 				<div class="row">
 					<div class="col section-title">GUESTS</div>
@@ -101,6 +101,17 @@
 				<div class="row">
 					<div class="col">
 						<button data-bind="click: updateGuests" class="btn">SEND</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section data-bind="css : {collapse : rsvpStep() != 3}" class="light-section section-padding">
+			<div class="container pt-5">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section-title">THANK YOU</div>
+						<div class="p-title">YOUR RSVP HAS BEEN SUBMITTED</div>
 					</div>
 				</div>
 			</div>
