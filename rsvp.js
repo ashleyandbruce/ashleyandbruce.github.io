@@ -48,10 +48,10 @@ function RsvpVM(){
 		}
 	};
 	
-	this.updateGuests = async function(){
+	this.updateGuests = function(){
 
 		for(guest of this.guests()){
-			console.log(guest);
+		
 			client.updateGuest(guest);
 		}
 		
