@@ -113,7 +113,8 @@ function GuestClient(){
 			method : 'POST',
 			headers:{
 				"Content-Type" : "application/json"
-			}
+			},
+			data: guest
 		});
 		
 		
@@ -123,7 +124,7 @@ function GuestClient(){
 		
 		$.ajax({
 			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
-			method : 'PATCH',
+			method : 'PUT',
 			headers:{
 				"Content-Type" : "application/json"
 			},
