@@ -113,7 +113,7 @@ function GuestClient(){
 			url : baseUrl + "/guests",
 			method : 'POST',
 			contentType: 'application/json',
-			data: guest
+			data: JSON.stringify(guest)
 		});
 		
 		
@@ -125,7 +125,7 @@ function GuestClient(){
 			url : baseUrl + "/guests/" + guest.first_name + "/" + guest.last_name,
 			method : 'PUT',
 			contentType: 'application/json',
-			data : guest
+			data : JSON.stringify(guest)
 		});
 	
 	};
