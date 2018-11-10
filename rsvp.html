@@ -39,90 +39,105 @@
 								<a class="nav-link active" href="rsvp.html">RSVP</a>
 							</li>
 						</ul>
-					</div>									
+					</div>
+					
 				</div>
 			</nav>
 		</header>
 		
-		
-		<section data-bind="css : {collapse : rsvpStep() != 1 }" class="light-section section-padding" >
-			<div class="container">
-				<div class="row">
-					<div class="col section-title">RSVP</div>
-				</div>
-				<div class="row">
-					<div class="col-8 pb-5">
-						<div class="p-title">Enter the name of one member of your party as addressed on your invitation.</div>
-					</div>
-				</div>
-				<div class="row align-items-center pb-5">
-					<div class="col-md-3 col-sm-12">
-						<input data-bind="textInput: firstName" type="text" class="form-control" placeholder="First Name">
-					</div>
-					
-					<div class="col-md-3 col-sm-12">
-						<input data-bind="textInput: lastName" type="text" class="form-control" placeholder="Last Name">
-					</div>
-					<div class="col-md-2">
-						<button data-bind="click: findGuests, disable: nameEmpty" class="btn"><i class="fas fa-angle-right"></i></button>
-					</div>
-				</div>
-				<div data-bind="visible: invalidNames" class="row">
-					<div class="col p-content">The name you entered is not on our list. Please contact us.</div>
-				</div>
-			</div>
-		</section>
-		
-		<section data-bind="css : {collapse : rsvpStep() != 2}" class="light-section section-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col section-title">GUESTS</div>
-				</div>
-				<div data-bind="foreach: guests">
-					<div class="row pb-5">
-						<div data-bind="text: (first_name + ' ' + last_name).toUpperCase()" class="col-12 p-title pb-5"></div>
-						
-						<div class="col-12 pb-5">
-							<label class="radio-container">ACCEPTS WITH PLEASURE
-								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="2">
-								<span class="radio-style"></span>
-							</label>
-							<label class="radio-container">DECLINES WITH REGRET
-								<input data-bind="attr: {name : $index}, checked: status" type="radio" value="3">
-								<span class="radio-style"></span>
-							</label>
-						</div>
-						
-						<div class="col-md-3 col-sm-12">
-							<textarea data-bind="textInput: dietary_res" class="form-control" rows="3" placeholder="Dietary restrictions"></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<button data-bind="click: updateGuests" class="btn">SEND</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<section data-bind="css : {collapse : rsvpStep() != 3}" class="light-section section-padding">
-			<div class="container pt-5">
-				<div class="row">
-					<div class="col text-center">
-						<div class="section-title">THANK YOU</div>
-						<div class="p-title">YOUR RSVP HAS BEEN SUBMITTED</div>
-					</div>
-				</div>
-			</div>
+		<section data-bind="with : currentViewModel" class="light-section section-padding">
+			<div data-bind ="template: {name: template}" class="container"></div>
 		</section>
 								
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-		<script src="main.js"></script>
 		<script src="rsvp.js"></script>
+		
+		<script id="guest-form" type="text/html">
+		
+			<div data-bind="text: fullName" class="offset-md-3 col-md-4 p-title"></div>
+						
+			<div class="col-md-3 pb-5">
+				
+				<label class="radio-container">
+					<input data-bind="attr: {name : $index}, checked: rsvpStatus" value ="2" type="radio">
+					<span class="radio-style">ACCEPT</span>
+				</label>
+				<label class="radio-container">
+					<input data-bind="attr: {name : $index}, checked: rsvpStatus" value="3" type="radio">
+					<span class="radio-style">DECLINE</span>
+				</label>
+				
+			</div>
+			
+			<div data-bind="visible : offerPlusOne" class ="offset-md-3 col-md-4 p-title">PLUS ONE?</div>
+			
+			<div data-bind="visible : offerPlusOne" class="col-md-3 pb-5">
+				<label class="radio-container">
+					<input data-toggle="" id="isPlusOne" name="plusOne" type="radio"></input>
+					<span class="radio-style">YES</span>
+				</label>
+				<label class="radio-container">
+					<input name="plusOne" type="radio" checked></input>
+					<span class="radio-style">NO</span>
+				</label>
+			</div>
+			
+			<!--<div class="offset-md-3 col-md-3">
+				<input type="text" class="custom-text-input" placeholder="FIRST NAME"></input>
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="custom-text-input" placeholder="LAST NAME"></input>
+			</div>-->
+			
+		</script>
+		
+		<script id="get-party-form" type="text/html">
+			<div class="row pb-5">
+				
+					<div class="offset-md-3 col section-title">RSVP</div>
+					
+					<div class="offset-md-3 col-md-6 pb-5">
+						<div class="p-title">ENTER THE NAME ON YOUR INVITE</div>
+					</div>
+					
+					<div class="offset-md-3 col-md-6 pb-5">
+						<input data-bind="textInput: firstName" type="text" class="custom-text-input" placeholder="FIRST NAME">
+					</div>
+					
+					<div class="offset-md-3 col-md-6 pb-5">
+						<input data-bind="textInput: lastName" type="text" class="custom-text-input" placeholder="LAST NAME">
+					</div>
+					
+					<div class="offset-md-3 col-md-6 pb-5">
+						<button data-bind="click: $parent.submit, disable: nameEmpty" class="btn">SUBMIT</button>
+					</div>
+					
+					<div data-bind="visible: invalidNames" class="offset-md-3 col-md-6 p-title">The name you entered is not on our list. Please contact us.</div>
+					
+					<div data-bind="visible: rsvpSubmitted" class="offset-md-3 col-md-6 p-title">You have already submitted your RSVP.</div>
+					
+				</div>
+		</script>
+		
+		<script id="update-party-form" type="text/html">
+		
+			<div class="row">
+					<div class="offset-md-3 col-md-6 section-title">GUESTS</div>
+			</div>
+								
+			<div data-bind="template: {name: 'guest-form', foreach: guests}" class="row pb-5"></div>
+				
+			<div class="row">
+				<div class="offset-md-3 col-md-6">
+					<button data-bind="click: $parent.send" class="btn">SEND</button>
+				</div>
+			</div>
+		
+		</script>
+		
 	</body>
   
 </html>

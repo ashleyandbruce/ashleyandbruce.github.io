@@ -1,45 +1,148 @@
 
-function RsvpVM(){
+function MainVM(){
 	
-	var client = new GuestClient();
-	this.firstName = ko.observable("");
-	this.lastName = ko.observable("");
-	this.invalidNames = ko.observable(false);
-	this.guests = ko.observableArray([]);
-	this.rsvpStep = ko.observable(1);
+	var self = this;
 	
-	this.nameEmpty = ko.computed(function(){
-		
-		return this.firstName() == '' || this.lastName() == '';
-		
-	}, this);
+	self.currentViewModel = ko.observable(new GetPartyVM());
 	
-	this.nextStep = function(){
-		this.rsvpStep(this.rsvpStep() + 1);
-	}
-	
-	this.findGuests = async function(){
+	self.submit = async function(){
 		
 		try{
-			var guests = await client.getPartyByGuest(this.firstName(), this.lastName());
+			//var guests = await self.currentViewModel().findGuests();
+			var guests =
+			[{
+				first_name : "Ashley",
+				last_name : "Currie", 
+				status : 1,
+				dietary_res : null,
+				has_plus_one : false
+				
+			},
+			{
+				first_name : "Bruce",
+				last_name : "Laird", 
+				status : 1,
+				dietary_res : null,
+				has_plus_one : false
+				
+			}];
+			self.currentViewModel(new UpdatePartyVM(guests));
 			
-			for(guest of guests){
-				this.guests.push(guest);
+		}catch(err){
+			console.log(err);
+		}
+		
+	};
+	
+	self.send = function(){
+		
+		self.currentViewModel().updateGuests();
+		
+	};
+		
+}
+
+
+
+function GetPartyVM(){
+	
+	var client = new GuestClient();
+	var self = this;
+	
+	self.template = ko.observable('get-party-form');
+	self.firstName = ko.observable("");
+	self.lastName = ko.observable("");
+	self.invalidNames = ko.observable(false);
+	self.rsvpSubmitted = ko.observable(false);
+	
+	self.nameEmpty = ko.computed(function(){
+		
+		return self.firstName() == '' || self.lastName() == '';
+		
+	});
+	
+	self.findGuests = async function(){
+		
+		try{
+			var guest = await client.getGuest(this.firstName(), this.lastName());
+			
+			if(guest.status != 1){
+				
+				self.rsvpSubmitted(true);
+				throw "Already sent RSVP";
 			}
-			this.nextStep();
+			return await client.getParty(guest.party_id);
 		}
 		catch(err){
-			this.invalidNames(true);
+			
+			self.invalidNames(true);
+			
+			throw err;
 		}
 
 	};
 	
-	this.updateGuests = function(){
-		client.updateGuests(this.guests());
-		this.nextStep();
+}
+
+function UpdatePartyVM(guests){
+	
+	var client = new GuestClient();
+	var self = this;
+	
+	self.template = ko.observable('update-party-form');
+	self.guests = ko.observableArray([]);
+	init(guests);
+	
+	self.updateGuests = function(){
+		
+		for(guest of self.guests()){
+			guest.updateGuest();
+		}
 	};
 	
+	function init(guests){
+		
+		for(guest of guests){
+			self.guests.push(new GuestVM(guest));
+		}
+		
+	}
+	
 }
+
+
+function GuestVM(guest){
+	
+	var client = new GuestClient();
+	var data = guest;
+	var self = this;
+		
+	self.hasPlusOne = ko.observable(guest.has_plus_one);
+	self.rsvpStatus = ko.observable('2');
+	self.template = ko.observable('guest-form');
+	
+	self.fullName = ko.computed(function(){
+		
+		return (data.first_name + ' ' + data.last_name).toUpperCase();
+		
+	}, this);
+
+	self.offerPlusOne = ko.computed(function(){
+		
+		return data.has_plus_one && this.rsvpStatus() == '2';
+		
+	}, this);
+	
+	
+	self.updateGuest = function(){
+		
+		data["status"] = parseInt(self.rsvpStatus());
+		client.updateGuest(data);
+	}
+	
+	
+}
+
 
 function GuestClient(){
 	
@@ -112,16 +215,8 @@ function GuestClient(){
 	
 	};
 	
-	this.updateGuests = function(guests){
-		
-		for(guest of guests){
-			this.updateGuest(guest);
-		}
-		
-	};
-	
 }
 
 $(document).ready(function(){
-	ko.applyBindings(new RsvpVM());
+	ko.applyBindings(new MainVM());
 });
