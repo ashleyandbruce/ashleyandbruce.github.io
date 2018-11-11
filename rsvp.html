@@ -70,28 +70,32 @@
 					<span class="radio-style">DECLINE</span>
 				</label>
 				
-			</div>
+			</div>	
+		</script>
+		
+		<script id="plus-one-form" type="text/html">
 			
-			<div data-bind="visible : offerPlusOne" class ="offset-md-3 col-md-4 p-title">PLUS ONE?</div>
+			<div class ="offset-md-3 col-md-4 p-title">ADD PLUS ONE?</div>
 			
-			<div data-bind="visible : offerPlusOne" class="col-md-3 pb-5">
+			<div class="col-md-3 pb-5">
 				<label class="radio-container">
-					<input data-toggle="" id="isPlusOne" name="plusOne" type="radio"></input>
+					<input data-bind="checked : rsvpStatus" name="plusOne" type="radio" value="2"></input>
 					<span class="radio-style">YES</span>
 				</label>
 				<label class="radio-container">
-					<input name="plusOne" type="radio" checked></input>
+					<input data-bind="checked : rsvpStatus" name="plusOne" type="radio" value="3"></input>
 					<span class="radio-style">NO</span>
 				</label>
 			</div>
 			
-			<!--<div class="offset-md-3 col-md-3">
-				<input type="text" class="custom-text-input" placeholder="FIRST NAME"></input>
+						
+			<div data-bind="visible : attending" class="offset-md-3 col-md-3">
+				<input data-bind="textInput : firstName" type="text" class="custom-text-input" placeholder="FIRST NAME"></input>
 			</div>
-			<div class="col-md-3">
-				<input type="text" class="custom-text-input" placeholder="LAST NAME"></input>
-			</div>-->
-			
+			<div data-bind="visible : attending" class="col-md-3">
+				<input data-bind="textInput : lastName" type="text" class="custom-text-input" placeholder="LAST NAME"></input>
+			</div>
+		
 		</script>
 		
 		<script id="get-party-form" type="text/html">
@@ -122,7 +126,7 @@
 				</div>
 		</script>
 		
-		<script id="update-party-form" type="text/html">
+		<script id="party-form" type="text/html">
 		
 			<div class="row">
 					<div class="offset-md-3 col-md-6 section-title">GUESTS</div>
@@ -138,6 +142,23 @@
 		
 		</script>
 		
+		<script id="single-party-form" type="text/html">
+		
+			<div class="row">
+					<div class="offset-md-3 col-md-6 section-title">GUESTS</div>
+			</div>
+		
+			<div data-bind="template : {name : 'guest-form', foreach : [primaryGuest()]}" class="row"></div>
+			<div data-bind="visible : offerPlusOne, template : {name : 'plus-one-form', data : plusOne}" class="row pb-5"></div>
+				
+			<div class="row">
+				<div class="offset-md-3 col-md-6">
+					<button data-bind="click: $parent.send" class="btn">SEND</button>
+				</div>
+			</div>
+			
+		</script>
+	
 	</body>
   
 </html>
