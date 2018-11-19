@@ -80,16 +80,17 @@ function GetPartyVM(){
 		try{
 			self.loadingGuests(true);
 			var guest = await client.getGuest(this.firstName(), this.lastName());
-			self.loadingGuests(false);
 			
 			if(guest.status != 1){
 				self.rsvpSubmitted(true);
 				throw "You have already submitted your RSVP.";
 			}
+			
+			self.loadingGuests(false);
 			return await client.getParty(guest.party_id);
 		}
 		catch(err){
-			
+			self.loadingGuests(false);
 			self.invalidNames(true);
 			throw "We could not find you on the list. Please contact us if you continue to experience difficulties.";
 		}
