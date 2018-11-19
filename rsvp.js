@@ -15,31 +15,18 @@ function MainVM (){
 	
 	var self = this;
 	self.currentViewModel = ko.observable(new GetPartyVM());
+	self.error = ko.observable(false);
+	self.errorMessage = ko.observable('');
 	
 	self.submit = async function(){
+		self.error(false);
 		try{
 			var guests = await self.currentViewModel().submit();
-			/*var guests =
-			[{
-				first_name : "Ashley",
-				last_name : "Currie", 
-				status : 1,
-				dietary_res : null,
-				has_plus_one : true
-				
-			},
-			{
-				first_name : "Bruce",
-				last_name : "Laird", 
-				status : 1,
-				dietary_res : null,
-				has_plus_one : false
-				
-			}];*/
 			self.currentViewModel(PartyVMFactory.create(guests));
 			
 		}catch(err){
-			console.log(err);
+			self.error(true);
+			self.errorMessage(err);
 		}
 	};
 		
@@ -80,18 +67,17 @@ function GetPartyVM(){
 		try{
 			self.loadingGuests(true);
 			var guest = await client.getGuest(this.firstName(), this.lastName());
+			self.loadingGuests(false);
+			
 			
 			if(guest.status != 1){
-				self.rsvpSubmitted(true);
 				throw "You have already submitted your RSVP.";
 			}
 			
-			self.loadingGuests(false);
 			return await client.getParty(guest.party_id);
 		}
 		catch(err){
 			self.loadingGuests(false);
-			self.invalidNames(true);
 			throw "We could not find you on the list. Please contact us if you continue to experience difficulties.";
 		}
 

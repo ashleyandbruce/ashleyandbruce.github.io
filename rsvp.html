@@ -118,9 +118,7 @@
 						<button data-bind="click: $parent.submit, disable: disableSubmit" class="btn"><span data-bind="visible: loadingGuests" class="fas fa-spinner"></span>SUBMIT</button>
 					</div>
 					
-					<div data-bind="visible: invalidNames" class="offset-md-3 col-md-6 p-title">The name you entered is not on our list. Please contact us.</div>
-					
-					<div data-bind="visible: rsvpSubmitted" class="offset-md-3 col-md-6 p-title">You have already submitted your RSVP.</div>
+					<div data-bind="visible: $parent.error, text: $parent.errorMessage" class="offset-md-3 col-md-6 p-title"></div>
 					
 				</div>
 		</script>
