@@ -6,6 +6,22 @@ html, body{
 	margin: 0;
 }
 
+/*Loading Icon*/
+
+.fa-spinner{
+	animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  padding-right: 10px;
+  position: relative;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
 /*Navigation*/
 
 .navbar{

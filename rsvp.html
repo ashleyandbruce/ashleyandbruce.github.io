@@ -46,6 +46,7 @@
 		</header>
 		
 		<section data-bind="with : currentViewModel" class="light-section section-padding">
+			<div class="modal fade show" tabindex="-1" role="dialog"></div>
 			<div data-bind ="template: {name: template}" class="container"></div>
 		</section>
 								
@@ -99,9 +100,7 @@
 		</script>
 		
 		<script id="get-party-form" type="text/html">
-			<div class="row pb-5">
-				
-					<div class="offset-md-3 col section-title">RSVP</div>
+			<div class="row pt-5 pb-5">
 					
 					<div class="offset-md-3 col-md-6 pb-5">
 						<div class="p-title">ENTER THE NAME ON YOUR INVITE</div>
@@ -116,7 +115,7 @@
 					</div>
 					
 					<div class="offset-md-3 col-md-6 pb-5">
-						<button data-bind="click: $parent.submit, disable: nameEmpty" class="btn">SUBMIT</button>
+						<button data-bind="click: $parent.submit, disable: disableSubmit" class="btn"><span data-bind="visible: loadingGuests" class="fas fa-spinner"></span>SUBMIT</button>
 					</div>
 					
 					<div data-bind="visible: invalidNames" class="offset-md-3 col-md-6 p-title">The name you entered is not on our list. Please contact us.</div>
@@ -128,8 +127,8 @@
 		
 		<script id="party-form" type="text/html">
 		
-			<div class="row">
-					<div class="offset-md-3 col-md-6 section-title">GUESTS</div>
+			<div class="row pt-5 pb-5">
+				<div class="offset-md-3 col-md-6 p-title">RSVP FOR EVERYONE IN YOUR PARTY:</div>
 			</div>
 								
 			<div data-bind="template: {name: 'guest-form', foreach: guests}" class="row pb-5"></div>
@@ -144,8 +143,8 @@
 		
 		<script id="single-party-form" type="text/html">
 		
-			<div class="row">
-					<div class="offset-md-3 col-md-6 section-title">GUESTS</div>
+			<div class="row pt-5 pb-5">
+					<div class="offset-md-3 col-md-6 p-title">RSVP FOR EVERYONE IN YOUR PARTY:</div>
 			</div>
 		
 			<div data-bind="template : {name : 'guest-form', foreach : [primaryGuest()]}" class="row"></div>
