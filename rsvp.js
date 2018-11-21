@@ -184,7 +184,7 @@ function GuestVM(guest){
 	self.update = function(){
 		
 		self.data["status"] = parseInt(self.rsvpStatus());
-		self.client.updateGuest(data);
+		self.client.updateGuest(self.data);
 	}
 	
 }
