@@ -13,6 +13,7 @@ html, body{
   -webkit-animation: spin 1s ease-in-out infinite;
   padding-right: 10px;
   position: relative;
+  transform-origin: center center;
 }
 
 @keyframes spin {

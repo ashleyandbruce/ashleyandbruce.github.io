@@ -46,8 +46,15 @@
 		</header>
 		
 		<section data-bind="with : currentViewModel" class="light-section section-padding">
-			<div class="modal fade show" tabindex="-1" role="dialog"></div>
-			<div data-bind ="template: {name: template}" class="container"></div>
+			<div data-bind ="template: {name: template}, visible : !$parent.formSubmitted()" class="container"></div>
+			<div data-bind="visible : $parent.formSubmitted" class="container">
+				<div class="row text-center">
+					<div class="col">
+						<div class="section-title">THANK YOU</div> 
+						<div class="p-title">YOUR RSVP HAS BEEN SUBMITTED</div>
+					</div>
+				</div>
+			</div>
 		</section>
 								
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -15,6 +15,7 @@ function MainVM (){
 	
 	var self = this;
 	self.currentViewModel = ko.observable(new GetPartyVM());
+	self.formSubmitted = ko.observable(false);
 	self.error = ko.observable(false);
 	self.errorMessage = ko.observable('');
 	
@@ -31,7 +32,7 @@ function MainVM (){
 	};
 		
 	self.send = function(){
-			
+		self.formSubmitted(true);
 		self.currentViewModel().submit();
 			
 	};
