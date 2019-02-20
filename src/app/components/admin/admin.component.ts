@@ -14,8 +14,8 @@ import { IAppState } from '../../interfaces/app-state.interface';
 })
 export class AdminComponent implements OnInit {
 
-  private parties : IGuest[][] = [];
-  private numberOfGuests : number;
+  public parties : IGuest[][] = [];
+  public numberOfGuests : number;
   
   constructor( private store : Store<IAppState>) { }
 

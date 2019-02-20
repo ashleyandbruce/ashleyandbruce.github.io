@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class LoadingComponent implements OnInit {
 	
-  private isLoading$ : Observable<boolean>;
+  public isLoading$ : Observable<boolean>;
   
   constructor(private store: Store<{ loading: boolean }>) { }
 

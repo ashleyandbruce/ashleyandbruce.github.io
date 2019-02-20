@@ -15,10 +15,10 @@ import { AddGuestsRequest } from '../../actions/add-guests.actions';
 export class RsvpComponent implements OnInit {
 
   private RsvpState = RsvpState;
-  private guests : IGuest[] = [];
-  private invalidInput : boolean = false;
-  private errorOccured : boolean = false;
-  private state : RsvpState = RsvpState.Start;
+  public guests : IGuest[] = [];
+  public invalidInput : boolean = false;
+  public errorOccured : boolean = false;
+  public state : RsvpState = RsvpState.Start;
   
   constructor( private store : Store<IAppState>) { }
 
