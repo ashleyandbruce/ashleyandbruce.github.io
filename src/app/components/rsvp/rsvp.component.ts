@@ -14,7 +14,7 @@ import { AddGuestsRequest } from '../../actions/add-guests.actions';
 
 export class RsvpComponent implements OnInit {
 
-  private RsvpState = RsvpState;
+  public RsvpState = RsvpState;
   public guests : IGuest[] = [];
   public invalidInput : boolean = false;
   public errorOccured : boolean = false;
