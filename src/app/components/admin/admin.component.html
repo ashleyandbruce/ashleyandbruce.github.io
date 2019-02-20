@@ -1,0 +1,13 @@
+<section class="light-section section-padding">
+
+	<div class="container">
+		<div class="row">
+			<div class="col section-title">All Guests ({{numberOfGuests}})</div>
+		</div>
+		<div *ngFor="let party of parties" class="row pt-3 pb-3 party-form-component">
+			<div *ngFor="let guest of party" class="col-12 p-title pt-1">{{guest.fullName()}}</div>
+		</div>
+	</div>
+	
+</section>
+

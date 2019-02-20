@@ -1,0 +1,55 @@
+/*Navigation*/
+
+.navbar{
+	border-bottom: 2px solid #f8f9fa;
+}
+
+.nav-link:focus{
+	outline: none;
+}
+
+.nav-link{
+	letter-spacing: 6px;
+	border-bottom: 3px solid white;
+}
+
+.navbar-brand:focus{
+	outline: none;
+}
+
+.navbar-brand{
+	letter-spacing: 6px;
+}
+
+@media (max-width: 575.98px) {
+	.navbar-brand{
+		font-size: 15px;
+	}
+	.nav-link{
+		font-size: 13px;
+	}
+	.nav-item{
+		text-align: center;
+		border-bottom: 1px solid grey;
+	}
+	.nav-link:hover{
+		border-bottom-color: white; 
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+	.navbar-brand{
+		font-size: 18px;
+	}
+	.nav-link{
+		font-size: 17px;
+	}
+	.nav-item{
+		text-align: center;
+		border-bottom: 1px solid grey;
+	}
+	.nav-link:hover{
+		border-bottom-color: white; 
+	}
+}
